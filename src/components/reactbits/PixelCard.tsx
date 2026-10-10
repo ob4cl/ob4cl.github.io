@@ -5,14 +5,27 @@
  * Licence: MIT + Commons Clause License Condition v1.0 — Copyright (c) 2026 David Haz
  * Full notice: /THIRD-PARTY-NOTICES.md
  *
- * Port changes: TypeScript types (the upstream `Pixel` class is typed field-by-field);
- * pixel lifecycle logic is unchanged.
+ * Port changes: TypeScript types, and the pixel lifecycle is driven by pointer proximity so the
+ * field follows the cursor (a bright trail that fades with distance) instead of only appearing
+ * while the card is hovered. The pointer is also published to CSS as `--px`, `--py`, `--ptx` and
+ * `--pty` so the card's children — a spotlight, a diagram — can react to the same gesture.
+ * Reduced motion keeps the field but removes the shimmer. Device pixel ratio is honoured so the
+ * pixels stay crisp on retina displays.
  */
 
 import { useEffect, useRef } from 'react';
-import type { FocusEvent, ReactNode } from 'react';
+import type { FocusEvent, PointerEvent as ReactPointerEvent, ReactNode } from 'react';
 
 import './pixel-card.css';
+
+/** How fast a pixel eases toward its target intensity, per 60fps frame. */
+const INTENSITY_EASE = 0.16;
+/** Intensity a pixel settles at when the card is hovered but the cursor is elsewhere. */
+const IDLE_INTENSITY = 0.22;
+/** Intensity of the pixels directly under the cursor. */
+const PEAK_INTENSITY = 1;
+/** Falloff exponent for the trail — higher is tighter. */
+const TRAIL_FALLOFF = 1.7;
 
 class Pixel {
   width: number;
@@ -21,98 +34,78 @@ class Pixel {
   x: number;
   y: number;
   color: string;
-  speed: number;
-  size: number;
-  sizeStep: number;
-  minSize: number;
-  maxSizeInteger: number;
+  minSize = 0.5;
+  maxSizeInteger = 2;
   maxSize: number;
-  delay: number;
-  counter: number;
-  counterStep: number;
-  isIdle: boolean;
-  isReverse: boolean;
-  isShimmer: boolean;
+  /** Shimmer rate in radians per frame (0 when motion is reduced). */
+  pulseRate: number;
+  /** Fixed per-pixel variation so the field never pulses in lockstep. */
+  jitter: number;
+  phase: number;
+  size = 0;
+  intensity = 0;
+  target = 0;
+  isIdle = true;
 
   constructor(
-    canvas: HTMLCanvasElement,
-    context: CanvasRenderingContext2D,
+    ctx: CanvasRenderingContext2D,
     x: number,
     y: number,
     color: string,
-    speed: number,
-    delay: number
+    pulseRate: number,
+    jitter: number
   ) {
-    this.width = canvas.width;
-    this.height = canvas.height;
-    this.ctx = context;
+    this.width = ctx.canvas.width;
+    this.height = ctx.canvas.height;
+    this.ctx = ctx;
     this.x = x;
     this.y = y;
     this.color = color;
-    this.speed = this.getRandomValue(0.1, 0.9) * speed;
-    this.size = 0;
-    this.sizeStep = Math.random() * 0.4;
-    this.minSize = 0.5;
-    this.maxSizeInteger = 2;
     this.maxSize = this.getRandomValue(this.minSize, this.maxSizeInteger);
-    this.delay = delay;
-    this.counter = 0;
-    this.counterStep = Math.random() * 4 + (this.width + this.height) * 0.01;
-    this.isIdle = false;
-    this.isReverse = false;
-    this.isShimmer = false;
+    this.pulseRate = pulseRate;
+    this.jitter = jitter;
+    this.phase = Math.random() * Math.PI * 2;
   }
 
   getRandomValue(min: number, max: number): number {
     return Math.random() * (max - min) + min;
   }
 
+  /** Advance one frame. Returns true while the pixel still needs to be drawn. */
+  update(): boolean {
+    this.intensity += (this.target - this.intensity) * INTENSITY_EASE;
+    if (Math.abs(this.target - this.intensity) < 0.004) {
+      this.intensity = this.target;
+    }
+
+    if (this.intensity === 0 && this.size <= 0.04) {
+      this.size = 0;
+      this.isIdle = true;
+      return false;
+    }
+
+    const shimmer =
+      this.pulseRate === 0 ? 1 : 0.84 + 0.16 * Math.sin(this.phase);
+    this.phase += this.pulseRate * this.jitter;
+
+    const goal =
+      this.intensity === 0 ? 0 : this.maxSize * (0.32 + 0.68 * this.intensity) * shimmer;
+
+    if (this.size < goal) {
+      this.size = Math.min(goal, this.size + 0.14 + 0.24 * this.intensity);
+    } else if (this.size > goal) {
+      this.size = Math.max(goal, this.size - 0.4);
+    }
+
+    this.isIdle = false;
+    return true;
+  }
+
   draw(): void {
-    const centerOffset = this.maxSizeInteger * 0.5 - this.size * 0.5;
+    const centerOffset = this.maxSize * 0.5 - this.size * 0.5;
+    this.ctx.globalAlpha = 0.22 + 0.78 * this.intensity;
     this.ctx.fillStyle = this.color;
     this.ctx.fillRect(this.x + centerOffset, this.y + centerOffset, this.size, this.size);
-  }
-
-  appear(): void {
-    this.isIdle = false;
-    if (this.counter <= this.delay) {
-      this.counter += this.counterStep;
-      return;
-    }
-    if (this.size >= this.maxSize) {
-      this.isShimmer = true;
-    }
-    if (this.isShimmer) {
-      this.shimmer();
-    } else {
-      this.size += this.sizeStep;
-    }
-    this.draw();
-  }
-
-  disappear(): void {
-    this.isShimmer = false;
-    this.counter = 0;
-    if (this.size <= 0) {
-      this.isIdle = true;
-      return;
-    } else {
-      this.size -= 0.1;
-    }
-    this.draw();
-  }
-
-  shimmer(): void {
-    if (this.size >= this.maxSize) {
-      this.isReverse = true;
-    } else if (this.size <= this.minSize) {
-      this.isReverse = false;
-    }
-    if (this.isReverse) {
-      this.size -= this.speed;
-    } else {
-      this.size += this.speed;
-    }
   }
 }
 
@@ -177,6 +170,11 @@ export interface PixelCardProps {
   colors?: string;
   noFocus?: boolean;
   className?: string;
+  /**
+   * Radius, in CSS pixels, around the cursor in which pixels light up. `0` falls back to the
+   * upstream behaviour: the whole field appears while the card is hovered.
+   */
+  pointerRadius?: number;
   children?: ReactNode;
 }
 
@@ -187,15 +185,21 @@ export default function PixelCard({
   colors,
   noFocus,
   className = '',
+  pointerRadius = 0,
   children
 }: PixelCardProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pixelsRef = useRef<Pixel[]>([]);
+  const gridRef = useRef({ cols: 0, rows: 0, step: 1 });
   const animationRef = useRef(0);
-  const timePreviousRef = useRef(
-    typeof performance === 'undefined' ? 0 : performance.now()
-  );
+  const pointerRef = useRef({
+    x: -1,
+    y: -1,
+    inside: false,
+    dirty: false,
+    last: { c0: 0, c1: -1, r0: 0, r1: -1 }
+  });
   const reducedMotion = useRef(
     typeof window !== 'undefined' &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -208,100 +212,221 @@ export default function PixelCard({
   const finalNoFocus = noFocus ?? variantCfg.noFocus;
 
   const initPixels = () => {
-    if (!containerRef.current || !canvasRef.current) return;
+    const container = containerRef.current;
+    const canvas = canvasRef.current;
+    if (!container || !canvas) return;
 
-    const rect = containerRef.current.getBoundingClientRect();
-    const width = Math.floor(rect.width);
-    const height = Math.floor(rect.height);
-    const ctx = canvasRef.current.getContext('2d');
+    const width = Math.max(1, Math.floor(container.clientWidth));
+    const height = Math.max(1, Math.floor(container.clientHeight));
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    canvasRef.current.width = width;
-    canvasRef.current.height = height;
-    canvasRef.current.style.width = `${width}px`;
-    canvasRef.current.style.height = `${height}px`;
+    // Draw in CSS pixels: the backing store carries the extra resolution.
+    const dpr = Math.min(typeof window === 'undefined' ? 1 : window.devicePixelRatio || 1, 2);
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    const colorsArray = finalColors.split(',');
+    const step = Math.max(2, parseInt(String(finalGap), 10));
+    const cols = Math.max(1, Math.floor(width / step) + 1);
+    const rows = Math.max(1, Math.floor(height / step) + 1);
+    const colorsArray = finalColors
+      .split(',')
+      .map((entry) => entry.trim())
+      .filter(Boolean);
+    const pulseRate = getEffectiveSpeed(finalSpeed, reducedMotion) * 2.2;
+
     const pxs: Pixel[] = [];
-    for (let x = 0; x < width; x += parseInt(String(finalGap), 10)) {
-      for (let y = 0; y < height; y += parseInt(String(finalGap), 10)) {
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < cols; col++) {
         const color = colorsArray[Math.floor(Math.random() * colorsArray.length)];
-
-        const dx = x - width / 2;
-        const dy = y - height / 2;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        const delay = reducedMotion ? 0 : distance;
-
         pxs.push(
-          new Pixel(
-            canvasRef.current,
-            ctx,
-            x,
-            y,
-            color,
-            getEffectiveSpeed(finalSpeed, reducedMotion),
-            delay
-          )
+          new Pixel(ctx, col * step, row * step, color, pulseRate, 0.6 + Math.random() * 0.8)
         );
       }
     }
+
     pixelsRef.current = pxs;
+    gridRef.current = { cols, rows, step };
+    pointerRef.current.last = { c0: 0, c1: -1, r0: 0, r1: -1 };
+
+    // A resize throws the field away; re-apply whatever the pointer is doing.
+    if (pointerRef.current.inside) {
+      applyPointerTargets();
+    }
   };
 
-  const doAnimate = (fnName: 'appear' | 'disappear') => {
-    animationRef.current = requestAnimationFrame(() => doAnimate(fnName));
-    const timeNow = performance.now();
-    const timePassed = timeNow - timePreviousRef.current;
-    const timeInterval = 1000 / 60;
+  /** Write the pointer's influence into the pixel targets around it. */
+  const applyPointerTargets = () => {
+    const pixels = pixelsRef.current;
+    const { cols, step } = gridRef.current;
+    if (!pixels.length) return;
 
-    if (timePassed < timeInterval) return;
-    timePreviousRef.current = timeNow - (timePassed % timeInterval);
+    const { x, y, inside, last } = pointerRef.current;
 
-    const ctx = canvasRef.current?.getContext('2d');
-    if (!ctx || !canvasRef.current) return;
-
-    ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
-
-    let allIdle = true;
-    for (let i = 0; i < pixelsRef.current.length; i++) {
-      const pixel = pixelsRef.current[i];
-      pixel[fnName]();
-      if (!pixel.isIdle) {
-        allIdle = false;
+    // Hand the cells the cursor has left back to the ambient intensity.
+    for (let col = last.c0; col <= last.c1; col++) {
+      for (let row = last.r0; row <= last.r1; row++) {
+        const pixel = pixels[row * cols + col];
+        if (pixel) pixel.target = IDLE_INTENSITY;
       }
     }
-    if (allIdle) {
+
+    if (!inside || pointerRadius <= 0) {
+      pointerRef.current.last = { c0: 0, c1: -1, r0: 0, r1: -1 };
+      return;
+    }
+
+    const c0 = Math.max(0, Math.floor((x - pointerRadius) / step));
+    const c1 = Math.min(cols - 1, Math.ceil((x + pointerRadius) / step));
+    const r0 = Math.max(0, Math.floor((y - pointerRadius) / step));
+    const r1 = Math.min(gridRef.current.rows - 1, Math.ceil((y + pointerRadius) / step));
+
+    for (let col = c0; col <= c1; col++) {
+      for (let row = r0; row <= r1; row++) {
+        const pixel = pixels[row * cols + col];
+        if (!pixel) continue;
+        const distance = Math.hypot(pixel.x - x, pixel.y - y);
+        if (distance >= pointerRadius) continue;
+        const proximity = 1 - distance / pointerRadius;
+        pixel.target =
+          IDLE_INTENSITY + (PEAK_INTENSITY - IDLE_INTENSITY) * Math.pow(proximity, TRAIL_FALLOFF);
+      }
+    }
+
+    pointerRef.current.last = { c0, c1, r0, r1 };
+  };
+
+  const animate = () => {
+    animationRef.current = requestAnimationFrame(animate);
+
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext('2d');
+    if (!canvas || !ctx || !pixelsRef.current.length) return;
+
+    if (pointerRef.current.dirty) {
+      applyPointerTargets();
+      pointerRef.current.dirty = false;
+    }
+
+    // The context carries the device-pixel-ratio transform, so clearing in CSS pixels is enough.
+    ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+
+    const pixels = pixelsRef.current;
+    let alive = false;
+    for (let i = 0; i < pixels.length; i++) {
+      const pixel = pixels[i];
+      if (pixel.update()) {
+        pixel.draw();
+        alive = true;
+      }
+    }
+
+    if (!alive && !pointerRef.current.inside) {
       cancelAnimationFrame(animationRef.current);
+      animationRef.current = 0;
     }
   };
 
-  const handleAnimation = (name: 'appear' | 'disappear') => {
-    cancelAnimationFrame(animationRef.current);
-    animationRef.current = requestAnimationFrame(() => doAnimate(name));
+  const start = () => {
+    if (animationRef.current) return;
+    animationRef.current = requestAnimationFrame(animate);
   };
 
-  const onMouseEnter = () => handleAnimation('appear');
-  const onMouseLeave = () => handleAnimation('disappear');
-  const onFocus = (e: FocusEvent<HTMLDivElement>) => {
-    if (e.currentTarget.contains(e.relatedTarget)) return;
-    handleAnimation('appear');
+  const publishPointer = (x: number, y: number) => {
+    const container = containerRef.current;
+    if (!container) return;
+    const width = container.clientWidth || 1;
+    const height = container.clientHeight || 1;
+    container.style.setProperty('--px', `${x.toFixed(1)}px`);
+    container.style.setProperty('--py', `${y.toFixed(1)}px`);
+    container.style.setProperty('--ptx', ((x / width) * 2 - 1).toFixed(3));
+    container.style.setProperty('--pty', ((y / height) * 2 - 1).toFixed(3));
   };
-  const onBlur = (e: FocusEvent<HTMLDivElement>) => {
-    if (e.currentTarget.contains(e.relatedTarget)) return;
-    handleAnimation('disappear');
+
+  const setPointerFromEvent = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    pointerRef.current.x = x;
+    pointerRef.current.y = y;
+    pointerRef.current.dirty = true;
+    publishPointer(x, y);
+  };
+
+  const enter = (event: ReactPointerEvent<HTMLDivElement>) => {
+    pointerRef.current.inside = true;
+    // A class rather than CSS :hover — the same state is what lights the field, and it survives
+    // touch and pen input where :hover never matches.
+    containerRef.current?.classList.add('is-pointing');
+    if (pointerRadius <= 0) {
+      for (const pixel of pixelsRef.current) pixel.target = PEAK_INTENSITY;
+    }
+    setPointerFromEvent(event);
+    start();
+  };
+
+  const move = (event: ReactPointerEvent<HTMLDivElement>) => {
+    if (!pointerRef.current.inside) return;
+    setPointerFromEvent(event);
+  };
+
+  const leave = (touched = false) => {
+    pointerRef.current.inside = false;
+    pointerRef.current.x = -1;
+    pointerRef.current.y = -1;
+    pointerRef.current.last = { c0: 0, c1: -1, r0: 0, r1: -1 };
+    for (const pixel of pixelsRef.current) pixel.target = 0;
+    const container = containerRef.current;
+    if (container) {
+      container.classList.remove('is-pointing');
+      container.style.setProperty('--ptx', '0');
+      container.style.setProperty('--pty', '0');
+      if (touched) {
+        container.style.removeProperty('--px');
+        container.style.removeProperty('--py');
+      }
+    }
+  };
+
+  const onPointerUp = (event: ReactPointerEvent<HTMLDivElement>) => {
+    // A finger is not a hover: let the trail go once the touch ends.
+    if (event.pointerType !== 'mouse') leave(true);
+  };
+
+  // Keyboard focus lights the field for visitors who never use a pointer.
+  const onFocus = (event: FocusEvent<HTMLDivElement>) => {
+    if (event.currentTarget.contains(event.relatedTarget)) return;
+    pointerRef.current.inside = true;
+    if (pointerRadius <= 0) {
+      for (const pixel of pixelsRef.current) pixel.target = PEAK_INTENSITY;
+    }
+    start();
+  };
+
+  const onBlur = (event: FocusEvent<HTMLDivElement>) => {
+    if (event.currentTarget.contains(event.relatedTarget)) return;
+    leave();
   };
 
   useEffect(() => {
     initPixels();
-    const observer = new ResizeObserver(() => {
-      initPixels();
-    });
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+    // ResizeObserver is in every browser this site targets; guard anyway so a missing one degrades
+    // to a fixed field instead of throwing.
+    const observer =
+      typeof ResizeObserver === 'function'
+        ? new ResizeObserver(() => {
+            initPixels();
+          })
+        : null;
+    const container = containerRef.current;
+    if (container && observer) observer.observe(container);
     return () => {
-      observer.disconnect();
+      observer?.disconnect();
       cancelAnimationFrame(animationRef.current);
+      animationRef.current = 0;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finalGap, finalSpeed, finalColors, finalNoFocus]);
@@ -310,8 +435,11 @@ export default function PixelCard({
     <div
       ref={containerRef}
       className={`pixel-card ${className}`}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      onPointerEnter={enter}
+      onPointerMove={move}
+      onPointerLeave={() => leave()}
+      onPointerCancel={() => leave(true)}
+      onPointerUp={onPointerUp}
       onFocus={finalNoFocus ? undefined : onFocus}
       onBlur={finalNoFocus ? undefined : onBlur}
       tabIndex={finalNoFocus ? -1 : 0}

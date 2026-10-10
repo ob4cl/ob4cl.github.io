@@ -22,3 +22,10 @@
 .scroller span {
   flex-shrink: 0;
 }
+
+/* Separator between marquee copies (see ScrollVelocity.tsx). */
+.scroller .scroller__sep {
+  color: var(--acid);
+  opacity: 0.75;
+  padding-inline: 0.6em;
+}

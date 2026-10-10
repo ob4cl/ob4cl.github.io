@@ -125,7 +125,15 @@ function VelocityText({
   for (let i = 0; i < numCopies; i++) {
     spans.push(
       <span className={className} key={i} ref={i === 0 ? copyRef : null}>
-        {children}&nbsp;
+        {children}
+        {/*
+          Upstream relies on the trailing space alone, which lets the last term of one copy and
+          the first of the next read as a single mashed word. A visible separator fixes the loop.
+        */}
+        <span className="scroller__sep" aria-hidden="true">
+          ·
+        </span>
+        &nbsp;
       </span>
     );
   }

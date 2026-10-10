@@ -90,8 +90,10 @@ function PrivacyTreatment({ animated }: TreatmentProps) {
           speed={animated ? 26 : 0}
           colors="#d8ff3e,#a9cc2b,#3f4a1c"
           noFocus
+          pointerRadius={170}
           className="treatment__pixel"
         >
+          <span className="localflow__spot" />
           <div className="localflow">
             <div className="localflow__node localflow__node--browser">
               <span className="localflow__label">your browser</span>
@@ -116,6 +118,8 @@ function PrivacyTreatment({ animated }: TreatmentProps) {
         No server, no account, no tracking — CindR ships as a browser-only app that also builds to
         Android, iOS and Windows.
       </p>
+
+      <p className="treatment__hint">Move the cursor: the field follows it.</p>
     </div>
   );
 }

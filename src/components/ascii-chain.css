@@ -3,6 +3,8 @@
 .ascii-chain__coordinate { position: absolute; top: 0; right: 0; }
 .ascii-chain__art { position: relative; width: 100%; container-type: inline-size; }
 .ascii-chain__art pre { margin: 0; width: max-content; white-space: pre; font-family: 'Courier New', monospace; font-size: 1.78cqw; line-height: 1.09; font-weight: 600; letter-spacing: 0; color: #dedfce; transform: rotate(-13deg); transform-origin: center; background: linear-gradient(135deg, #89927e 5%, #eff3e5 32%, #b1bb98 49%, #eff3e5 60%, #727e61 92%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+/* One box per glyph so the pointer can break the chain apart (see AsciiChain.tsx). */
+.ascii-chain__art pre .chain-glyph { display: inline-block; }
 .ascii-chain__center { position: absolute; inset: 39% 20% auto; text-align: center; color: var(--muted); font: 400 .63rem/1.7 var(--font-mono); letter-spacing: .18em; pointer-events: none; }
 .ascii-chain__center b { font-weight: 500; color: var(--paper); }
 .ascii-chain__center i { display: block; font: 500 1.4rem/1.5 var(--font-display); letter-spacing: -.08em; color: var(--acid); padding-top: .7rem; }

@@ -5,16 +5,20 @@
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: clamp(1.5rem, 4vw, 4rem);
-  align-items: start;
+  align-items: stretch;
   padding-block: clamp(3rem, 8vh, 6.5rem);
   border-top: 1px solid var(--rule);
   scroll-margin-top: 5rem;
 }
 
+/*
+ * The big index numeral is a watermark for the text column, never the treatment column: the
+ * surfaces are opaque, so a numeral placed under them is simply invisible.
+ */
 .panel__numeral {
   position: absolute;
-  top: clamp(2.4rem, 6vh, 5rem);
-  right: 0;
+  top: clamp(2.2rem, 5.5vh, 4.6rem);
+  left: 0;
   z-index: 0;
   font-family: var(--font-serif);
   font-size: clamp(4rem, 13vw, 12rem);
@@ -22,17 +26,25 @@
   line-height: 0.8;
   letter-spacing: -0.06em;
   color: transparent;
-  -webkit-text-stroke: 1px var(--rule-strong);
+  -webkit-text-stroke: 1px rgba(242, 239, 228, 0.34);
   pointer-events: none;
   user-select: none;
+}
+
+/* Browsers without text-stroke get a flat ghost instead of an invisible numeral. */
+@supports not (-webkit-text-stroke: 1px rgba(0, 0, 0, 0.5)) {
+  .panel__numeral {
+    color: rgba(242, 239, 228, 0.14);
+  }
 }
 
 .panel__body {
   position: relative;
   z-index: 1;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  align-content: start;
+  min-width: 0;
 }
 
 .panel__kicker {
@@ -186,8 +198,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem 0.9rem;
-  margin-top: 0.5rem;
-  padding-top: 0.9rem;
+  /* Pushed to the foot of the text column so its rule lines up with the treatment's. */
+  margin-top: auto;
+  padding-top: 1.2rem;
   border-top: 1px solid var(--rule);
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -216,9 +229,10 @@
     order: -1;
   }
 
+  /* The numeral stays with the text, wherever the text has moved. */
   .works__panels > .panel:nth-child(even) .panel__numeral {
-    right: auto;
-    left: 0;
+    left: auto;
+    right: 0;
   }
 }
 

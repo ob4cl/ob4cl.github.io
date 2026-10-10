@@ -2,8 +2,10 @@
 
 ## Executed checks
 
-- `npm test`: 7 test files, 56 tests passed.
+- `npm test`: 10 test files, 76 tests passed.
 - `npm run build`: successful TypeScript and Vite production build. One advisory about the combined animation bundle size remains; this is not a build failure.
+- Interaction coverage added as behavioural component tests against the real components, not just snapshots: `pixel-filter` — the CindR field lights the pixels around the pointer (brightest and largest nearest it), publishes the pointer to CSS, clears and stops when the pointer leaves, and keeps the flat field when no pointer radius is set; `chain-break` — the hero chain is untouched at rest, glyphs inside the field's reach are thrown away from the cursor within the push budget, glyphs outside it are never touched, the chain reassembles and the frame loop stops on pointer leave, and touch input is ignored.
+- Geometry of the break-apart field is separately unit tested for distance falloff, direction, bounded magnitude and settling.
 - `npm audit --omit=dev`: 0 known production dependency vulnerabilities reported at verification time.
 - Chromium production-bundle runs at widths 320, 390, 768 and 1440: document width equals viewport width, no JavaScript page errors.
 - axe WCAG A/AA checks at 320, 390 and 1440: no automated violations. This is not a claim of exhaustive accessibility certification.

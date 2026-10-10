@@ -16,7 +16,7 @@ Dependencies are already installed. For a clean checkout, use `npm ci`.
 
 - `npm run dev` — start the development server yourself.
 - `npm run typecheck` — TypeScript checks.
-- `npm test` — 56 unit/component/content tests.
+- `npm test` — 76 unit/component/content tests.
 - `npm run build` — typecheck and create `dist/`.
 - `node scripts/make-preview.mjs` — regenerate the standalone preview after building.
 
@@ -24,9 +24,11 @@ No dev, preview or static server was started during construction. Production out
 
 ## Implementation
 
-- GSAP/ScrollTrigger scroll choreography, active project index and pointer-reactive ASCII chain.
+- GSAP/ScrollTrigger scroll choreography, active project index and the hero chain's break-apart field.
 - Lenis smooth scrolling, with native scrolling when motion is disabled.
 - Adapted React Bits: Particles, TextPressure, FaultyTerminal, Radar, PixelCard, SpotlightCard, GlareHover, ScrollFloat and ScrollVelocity.
+- CindR's React Bits `PixelCard` is pointer-driven: the pixel field lights only around the cursor and publishes `--px`/`--py`/`--ptx`/`--pty` so the diagram and its spotlight react to the same gesture.
+- The hero chain splits into one box per glyph only when moved: the artwork is unchanged until the cursor arrives, then glyphs within reach are thrown clear and settle back.
 - Original procedurally rendered ASCII Cuban-link necklace and compact chain mark in `src/assets/`.
 - Self-hosted Bricolage Grotesque, Fraunces and IBM Plex Mono.
 - Five project-detail dialogs with Escape, keyboard focus trapping and focus restoration.
