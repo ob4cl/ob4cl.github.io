@@ -28,4 +28,4 @@ Screenshots were taken from the actual build using intercepted local responses i
 
 The horizontal project index intentionally scrolls on small screens. Its off-screen buttons are inside its clipping/scrolling container; the page itself has no horizontal overflow.
 
-The site is built locally only. No GitHub repository was created, no code was pushed and no hosting deployment was performed.
+The site is built and published: the repository is public at https://github.com/ob4cl/ob4cl.github.io and GitHub Pages serves it at https://ob4cl.github.io/ (deployed from `dist/` by `.github/workflows/deploy.yml`).

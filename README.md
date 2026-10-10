@@ -2,6 +2,10 @@
 
 A React + TypeScript portfolio featuring exactly Forgix, CindR, dependency-risk-radar, modelguard and Taunton Web Co. Identity is ob4cl only.
 
+## Live
+
+Published at **https://ob4cl.github.io/** via GitHub Pages (`.github/workflows/deploy.yml` builds `dist/` on every push to `main`).
+
 ## Open it immediately
 
 Open `preview.html` in a modern browser. It is a self-contained preview with embedded JavaScript, styles, fonts and the Taunton screenshot; no server or installation is required. The deployable site is in `dist/`.
@@ -41,4 +45,4 @@ The production build currently emits a bundle-size advisory because the applicat
 
 ## Attribution and ownership
 
-See `public/THIRD-PARTY-NOTICES.md` for complete available third-party notices and the GSAP license reference. React Bits uses MIT + Commons Clause, not unrestricted MIT; this is a composed portfolio, not a redistributed component library. Third-party code retains its original terms. The project has not been pushed to GitHub or deployed.
+See `public/THIRD-PARTY-NOTICES.md` for complete available third-party notices and the GSAP license reference. React Bits uses MIT + Commons Clause, not unrestricted MIT; this is a composed portfolio, not a redistributed component library. Third-party code retains its original terms. The repository is public at https://github.com/ob4cl/ob4cl.github.io and the site is live at https://ob4cl.github.io/.
