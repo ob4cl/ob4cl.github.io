@@ -24,13 +24,16 @@ export default function Works({ animated, activeId, onOpenDetails }: WorksProps)
       <div className="works__intro">
         <p className="works__eyebrow">the gallery</p>
 
-        <ScrollFloat
-          containerClassName="works__title"
-          textClassName="works__title-text"
-          enabled={animated}
-        >
-          Selected work
-        </ScrollFloat>
+        {/* Decorative repeat of the section label below, hidden so screen readers hear it once. */}
+        <div aria-hidden="true">
+          <ScrollFloat
+            containerClassName="works__title"
+            textClassName="works__title-text"
+            enabled={animated}
+          >
+            Selected work
+          </ScrollFloat>
+        </div>
 
         <div className="works__intro-cols">
           <h2 className="visually-hidden" id="works-title">

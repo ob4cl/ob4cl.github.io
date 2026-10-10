@@ -98,6 +98,17 @@ export default function Footer() {
           No cookies, no analytics, no third-party requests. Content sourced from each project's own
           README and repository metadata.
         </p>
+        <p className="footer__meta">
+          Accessibility: this site targets WCAG 2.2 AA. Report an issue at{' '}
+          <a
+            href="https://github.com/ob4cl/ob4cl.github.io/issues"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            github.com/ob4cl/ob4cl.github.io/issues
+          </a>
+          .
+        </p>
       </div>
     </footer>
   );

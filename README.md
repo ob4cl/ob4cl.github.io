@@ -28,7 +28,10 @@ No dev, preview or static server was started during construction. Production out
 - Lenis smooth scrolling, with native scrolling when motion is disabled.
 - Adapted React Bits: Particles, TextPressure, FaultyTerminal, Radar, PixelCard, SpotlightCard, GlareHover, ScrollFloat and ScrollVelocity.
 - CindR's React Bits `PixelCard` is pointer-driven: the pixel field lights only around the cursor and publishes `--px`/`--py`/`--ptx`/`--pty` so the diagram and its spotlight react to the same gesture.
-- The hero chain splits into one box per glyph only when moved: the artwork is unchanged until the cursor arrives, then glyphs within reach are thrown clear and settle back.
+- The hero chain splits into one box per glyph only when moved: the artwork is unchanged until the cursor arrives, then glyphs within reach are thrown clear along their own direction, at their own speed, and settle back.
+- Index numerals are watermarks for each panel's text column: anchored to the top-right of the copy and painted behind it, so they are never buried under an opaque treatment surface.
+- Static head metadata for sharing and search: canonical URL, Open Graph and Twitter card with a generated 1200x630 preview, `ProfilePage` structured data, `robots.txt` and `sitemap.xml`.
+- A `Content-Security-Policy` meta tag (`default-src 'self'`, inline allowed only where the pre-paint script and inline styles need it) plus a branded 404 page.
 - Original procedurally rendered ASCII Cuban-link necklace and compact chain mark in `src/assets/`.
 - Self-hosted Bricolage Grotesque, Fraunces and IBM Plex Mono.
 - Five project-detail dialogs with Escape, keyboard focus trapping and focus restoration.

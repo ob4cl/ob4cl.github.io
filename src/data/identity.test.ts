@@ -24,6 +24,10 @@ const APPROVED_HOSTS = new Set([
   'fontsource.org',
   'gsap.com',
   'motion.dev',
+  // The site's own canonical origin, referenced by the canonical/OG tags.
+  'ob4cl.github.io',
+  // Structured-data vocabulary identifier used in index.html's JSON-LD.
+  'schema.org',
   // XML namespace identifier used by inline SVG data URIs — an identifier, never requested.
   'www.w3.org'
 ]);

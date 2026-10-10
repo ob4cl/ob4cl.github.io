@@ -30,11 +30,11 @@ export default function ProjectPanel({ project, animated, onOpenDetails }: Proje
       data-project={project.id}
       aria-labelledby={`${project.id}-name`}
     >
-      <p className="panel__numeral" data-panel-numeral aria-hidden="true">
-        {project.num}
-      </p>
-
       <div className="panel__body">
+        <p className="panel__numeral" data-panel-numeral aria-hidden="true">
+          {project.num}
+        </p>
+
         <p className="panel__kicker">
           <span className="panel__num">{project.num}</span>
           <span className="panel__divider" aria-hidden="true">

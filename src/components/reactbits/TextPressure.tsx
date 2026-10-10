@@ -35,6 +35,11 @@ interface TextPressureProps {
   className?: string;
 
   minFontSize?: number;
+  /**
+   * Decorative type: renders a `div` with `aria-hidden` instead of a heading, for callers that
+   * already provide the page heading for screen readers.
+   */
+  decorative?: boolean;
 }
 
 interface Point {
@@ -81,7 +86,8 @@ const TextPressure = ({
   strokeColor = '#FF0000',
   className = '',
 
-  minFontSize = 24
+  minFontSize = 24,
+  decorative = false
 }: TextPressureProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -237,7 +243,47 @@ const TextPressure = ({
       }}
     >
       {styleElement}
-      <h1
+      {decorative ? (
+        <div
+          ref={titleRef as unknown as React.RefObject<HTMLDivElement>}
+          aria-hidden="true"
+          className={`text-pressure-title ${dynamicClassName}`}
+          style={
+            {
+              fontFamily,
+              textTransform: 'none',
+              fontSize,
+              lineHeight,
+              transform: `scale(1, ${scaleY})`,
+              transformOrigin: 'center top',
+              margin: 0,
+              textAlign: 'center',
+              userSelect: 'none',
+              whiteSpace: 'nowrap',
+              fontWeight: 100,
+              width: '100%'
+            } as CSSProperties
+          }
+        >
+          {chars.map((char, i) => (
+            <span
+              key={`${char}-${i}`}
+              ref={(el) => {
+                spansRef.current[i] = el;
+              }}
+              className="tp-char"
+              data-char={char}
+              style={{
+                display: 'inline-block',
+                color: stroke ? undefined : textColor
+              }}
+            >
+              {char}
+            </span>
+          ))}
+        </div>
+      ) : (
+        <h1
         ref={titleRef}
         className={`text-pressure-title ${dynamicClassName}`}
         style={
@@ -274,6 +320,7 @@ const TextPressure = ({
           </span>
         ))}
       </h1>
+      )}
     </div>
   );
 };

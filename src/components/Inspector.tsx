@@ -61,7 +61,7 @@ export default function Inspector({ project, onClose }: InspectorProps) {
         aria-describedby={descriptionId}
         ref={dialogRef}
       >
-        <header className="inspector__head">
+        <div className="inspector__head">
           <div>
             <p className="inspector__kicker">
               <span className="inspector__num">{project.num}</span>
@@ -84,7 +84,7 @@ export default function Inspector({ project, onClose }: InspectorProps) {
               Esc
             </span>
           </button>
-        </header>
+        </div>
 
         <p className="inspector__lede" id={descriptionId}>
           {project.tagline} — {project.lede}
@@ -108,7 +108,7 @@ export default function Inspector({ project, onClose }: InspectorProps) {
           ))}
         </div>
 
-        <footer className="inspector__foot">
+        <div className="inspector__foot">
           <dl className="inspector__facts">
             {project.facts.map((fact) => (
               <div key={fact.label}>
@@ -126,7 +126,7 @@ export default function Inspector({ project, onClose }: InspectorProps) {
               </a>
             ))}
           </div>
-        </footer>
+        </div>
       </div>
     </div>
   );

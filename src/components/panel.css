@@ -12,16 +12,17 @@
 }
 
 /*
- * The big index numeral is a watermark for the text column, never the treatment column: the
- * surfaces are opaque, so a numeral placed under them is simply invisible.
+ * The big index numeral is a watermark for the text column: anchored to the top-right of the copy,
+ * behind it (the body is its own stacking context, so z-index -1 stays under the text), and clear
+ * of the treatment column, whose surfaces are opaque.
  */
 .panel__numeral {
   position: absolute;
-  top: clamp(2.2rem, 5.5vh, 4.6rem);
-  left: 0;
-  z-index: 0;
+  top: 0;
+  right: 0;
+  z-index: -1;
   font-family: var(--font-serif);
-  font-size: clamp(4rem, 13vw, 12rem);
+  font-size: clamp(3.2rem, 8.5vw, 8rem);
   font-weight: 300;
   line-height: 0.8;
   letter-spacing: -0.06em;
@@ -228,12 +229,6 @@
   .works__panels > .panel:nth-child(even) .panel__visual {
     order: -1;
   }
-
-  /* The numeral stays with the text, wherever the text has moved. */
-  .works__panels > .panel:nth-child(even) .panel__numeral {
-    left: auto;
-    right: 0;
-  }
 }
 
 @media (max-width: 1079px) {
@@ -243,8 +238,8 @@
   }
 
   .panel__numeral {
-    font-size: clamp(4rem, 22vw, 9rem);
-    top: 1.5rem;
+    font-size: clamp(3.4rem, 18vw, 7rem);
+    top: 0;
     opacity: 0.6;
   }
 }

@@ -28,6 +28,8 @@
   flex-direction: row;
   align-items: center;
   gap: 0.7rem;
+  /* Keeps the tap target at the 24px minimum the WCAG 2.2 target-size rule asks for. */
+  min-height: 24px;
   text-decoration: none;
   line-height: 1;
 }

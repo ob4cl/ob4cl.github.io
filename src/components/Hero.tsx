@@ -30,7 +30,7 @@ export default function Hero({ animated }: { animated: boolean }) {
         <div className="hero__identity">
           <div className="hero__identity-copy">
             <div className="hero__wordmark" aria-hidden="true">
-              {animated && near ? <TextPressure text="ob4cl" fontFamily="'Bricolage Grotesque Variable', system-ui, sans-serif" textColor="#f2efe4" width weight italic={false} alpha={false} flex minFontSize={56} /> : <span className="hero__static-word">ob4cl</span>}
+              {animated && near ? <TextPressure text="ob4cl" fontFamily="'Bricolage Grotesque Variable', system-ui, sans-serif" textColor="#f2efe4" width weight italic={false} alpha={false} flex minFontSize={56} decorative /> : <span className="hero__static-word">ob4cl</span>}
             </div>
             <p className="hero__tagline">Curiosity.<br />Made <em>functional.</em></p>
             <p className="hero__statement">I build developer tools, security experiments and websites. This is a collection of the things I’ve made.</p>

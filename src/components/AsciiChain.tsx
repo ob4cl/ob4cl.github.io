@@ -6,10 +6,12 @@ import mark from '../assets/chain-mark.txt?raw';
 import {
   CHAIN_FIELD,
   easeToward,
+  GLYPH_TRAITS,
   glyphDisplacement,
   isDisplaced,
   NO_DISPLACEMENT,
   toArtworkSpace,
+  travelRate,
   type ArtworkFrame,
   type Displacement,
   type GlyphHome
@@ -17,10 +19,6 @@ import {
 import './ascii-chain.css';
 
 /** Original procedural ASCII artwork created for ob4cl, not a third-party logo. */
-
-/** How fast a glyph travels, per frame: quicker into the fracture than back out of it. */
-const EASE_OUT = 0.24;
-const EASE_HOME = 0.12;
 
 export default function AsciiChain({
   compact = false,
@@ -74,7 +72,13 @@ export default function AsciiChain({
         y: span.offsetTop,
         debrisX: Math.random() * 2 - 1,
         debrisY: Math.random() * 2 - 1,
-        debrisSpin: Math.random() * 2 - 1
+        debrisSpin: Math.random() * 2 - 1,
+        // Each glyph gets its own direction, sensitivity and speed, so the chain frays unevenly.
+        angle: (Math.random() * 2 - 1) * GLYPH_TRAITS.angle,
+        sense:
+          GLYPH_TRAITS.senseMin +
+          Math.random() * (GLYPH_TRAITS.senseMax - GLYPH_TRAITS.senseMin),
+        rate: GLYPH_TRAITS.rateMin + Math.random() * (GLYPH_TRAITS.rateMax - GLYPH_TRAITS.rateMin)
       }));
       const offsets: Displacement[] = spans.map(() => ({ ...NO_DISPLACEMENT }));
       const applied: boolean[] = spans.map(() => false);
@@ -116,12 +120,9 @@ export default function AsciiChain({
         let moving = false;
 
         for (let index = 0; index < spans.length; index++) {
-          const target = glyphDisplacement(homes[index], cursor, CHAIN_FIELD);
-          const offset = easeToward(
-            offsets[index],
-            target,
-            cursor.active ? EASE_OUT : EASE_HOME
-          );
+          const home = homes[index];
+          const target = glyphDisplacement(home, cursor, CHAIN_FIELD);
+          const offset = easeToward(offsets[index], target, travelRate(home, cursor.active));
           offsets[index] = offset;
 
           const displaced = isDisplaced(offset);
