@@ -1,7 +1,7 @@
 import { cleanup, render } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { CHAIN_FIELD, GLYPH_TRAITS } from '../lib/chainField';
+import { CHAIN_FIELD, FIELD_LIMITS, glyphClass, type GlyphClass } from '../lib/chainField';
 import AsciiChain from './AsciiChain';
 
 // jsdom is slow with hundreds of DOM writes per frame; these tests pump a lot of frames.
@@ -12,14 +12,17 @@ vi.setConfig({ testTimeout: 60000 });
  * stand-in artwork: jsdom would take tens of seconds to lay out the 1,300 glyph boxes of the real
  * chain on every render, and this file needs to pump hundreds of frames. The real artwork's split
  * is covered in AsciiChain.test.tsx.
+ *
+ * The stand-in mixes registers on purpose — a digit, a lowercase letter and symbols sit next to
+ * the capitals — so the class behaviour is exercised here too.
  */
+const ROW = 'X2a#H5s@M3r&'.repeat(2);
+// The artwork literal is inlined because `vi.mock` is hoisted above module scope.
 vi.mock('../assets/chain-hero.txt?raw', () => ({
-  default: Array.from({ length: 12 }, () => Array.from({ length: 20 }, () => 'X').join('')).join(
-    '\n'
-  )
+  default: Array.from({ length: 12 }, () => 'X2a#H5s@M3r&'.repeat(2)).join('\n')
 }));
 
-const GLYPHS_PER_ROW = 20;
+const GLYPHS_PER_ROW = ROW.length;
 const X_STEP = 16;
 const Y_STEP = 16;
 
@@ -63,10 +66,10 @@ const pointerEvent = (type: string, x: number, y: number) => {
 
 const glyphTransform = (element: Element) => (element as HTMLElement).style.transform;
 
-/** Parse the numeric parts of a `translate(x, y) rotate(z)` transform. */
+/** Parse the numeric parts of a `translate(x, y) rotate(z) scale(s)` transform. */
 const parseTransform = (value: string) => {
   const numbers = value.match(/-?\d+(\.\d+)?/g)?.map(Number) ?? [];
-  return { x: numbers[0] ?? 0, y: numbers[1] ?? 0, rotation: numbers[2] ?? 0 };
+  return { x: numbers[0] ?? 0, y: numbers[1] ?? 0, rotation: numbers[2] ?? 0, scale: numbers[3] ?? 1 };
 };
 
 const offset = (element: Element) => parseTransform(glyphTransform(element) || '');
@@ -137,15 +140,19 @@ describe('AsciiChain break-apart field', () => {
     glyphs.forEach((glyph, index) => {
       const home = homeOf(index);
       const distance = Math.hypot(home.x - CURSOR.x, home.y - CURSOR.y);
-      if (distance > CHAIN_FIELD.reach * GLYPH_TRAITS.senseMax + 15) {
+      if (distance > CHAIN_FIELD.reach * FIELD_LIMITS.senseMax + 15) {
         expect(glyphTransform(glyph)).toBeFalsy();
       }
     });
 
-    // Displacement is a falloff, bounded by push + scatter.
+    // Displacement is a falloff, bounded by the class weight on top of push + scatter.
     for (const glyph of moved) {
-      expect(magnitude(glyph)).toBeLessThanOrEqual(CHAIN_FIELD.push + CHAIN_FIELD.scatter + 0.01);
-      expect(Math.abs(offset(glyph).rotation)).toBeLessThanOrEqual(CHAIN_FIELD.spin + 0.01);
+      expect(magnitude(glyph)).toBeLessThanOrEqual(
+        CHAIN_FIELD.push * FIELD_LIMITS.gainMax + CHAIN_FIELD.scatter + 0.01
+      );
+      expect(Math.abs(offset(glyph).rotation)).toBeLessThanOrEqual(
+        CHAIN_FIELD.spin * FIELD_LIMITS.tumbleMax + 0.01
+      );
     }
 
     // Glyphs to the right of the cursor are, on the whole, thrown further right — away from it.
@@ -204,6 +211,87 @@ describe('AsciiChain break-apart field', () => {
     expect(glyphs.every((glyph) => !glyphTransform(glyph))).toBe(true);
     // And the loop stops itself once the chain is whole again.
     expect(frameQueue.size).toBe(0);
+  });
+
+  it('shrinks the pieces while the chain is broken apart', () => {
+    const { chain, glyphs } = setup();
+    chain.dispatchEvent(pointerEvent('pointermove', CURSOR.x, CURSOR.y));
+    pump(30);
+
+    const broken = glyphs.filter((glyph) => glyphTransform(glyph));
+    expect(broken.length).toBeGreaterThan(10);
+
+    const scales = broken.map((glyph) => offset(glyph).scale);
+    // Every piece is smaller than a whole character, and none of them disappears.
+    expect(Math.max(...scales)).toBeLessThanOrEqual(1);
+    expect(Math.min(...scales)).toBeLessThan(1);
+    expect(Math.min(...scales)).toBeGreaterThanOrEqual(
+      1 - CHAIN_FIELD.shrink * FIELD_LIMITS.depthMax - 0.001
+    );
+
+    // The further a piece is thrown, the smaller it gets: the smallest sits under the cursor.
+    const nearest = broken
+      .map((glyph) => ({ glyph, home: homeOf(glyphs.indexOf(glyph)) }))
+      .sort((a, b) => offset(a.glyph).scale - offset(b.glyph).scale)[0];
+    expect(Math.hypot(nearest.home.x - CURSOR.x, nearest.home.y - CURSOR.y)).toBeLessThan(40);
+
+    // And a piece on its way home grows back before it lands.
+    chain.dispatchEvent(pointerEvent('pointerleave', 0, 0));
+    pump(60);
+    const returning = glyphs.filter((glyph) => glyphTransform(glyph)).map((glyph) => offset(glyph).scale);
+    expect(Math.min(...returning)).toBeGreaterThan(Math.min(...scales));
+  });
+
+  it('breaks numbers, letters and symbols apart differently', () => {
+    const { chain, glyphs } = setup();
+    chain.dispatchEvent(pointerEvent('pointermove', CURSOR.x, CURSOR.y));
+    pump(40);
+
+    const byClass: Record<GlyphClass, { size: number; spin: number; scale: number }[]> = {
+      digit: [],
+      upper: [],
+      lower: [],
+      symbol: []
+    };
+    glyphs.forEach((glyph) => {
+      if (!glyphTransform(glyph)) return;
+      const value = offset(glyph);
+      byClass[glyphClass(glyph.textContent ?? '')].push({
+        size: Math.hypot(value.x, value.y),
+        spin: Math.abs(value.rotation),
+        scale: value.scale
+      });
+    });
+
+    for (const kind of Object.keys(byClass) as GlyphClass[]) {
+      expect(byClass[kind].length, `${kind} glyphs should have broken apart`).toBeGreaterThan(3);
+    }
+
+    type Broken = { size: number; spin: number; scale: number };
+    const average = (list: Broken[], pick: (entry: Broken) => number) =>
+      list.reduce((total, entry) => total + pick(entry), 0) / list.length;
+    // Measuring per pixel travelled cancels the distance falloff, so what is left is the class's
+    // own register: how hard it rolls and how far it retreats for the same throw.
+    const perPixel = (list: Broken[], pick: (entry: Broken) => number) =>
+      average(
+        list.filter((entry) => entry.size > 0.4),
+        (entry) => pick(entry) / entry.size
+      );
+
+    // Capitals are the heavy links: for the same throw they barely tumble and barely shrink...
+    expect(perPixel(byClass.upper, (entry) => entry.spin)).toBeLessThan(
+      perPixel(byClass.symbol, (entry) => entry.spin) / 1.3
+    );
+    expect(perPixel(byClass.upper, (entry) => 1 - entry.scale)).toBeLessThan(
+      perPixel(byClass.symbol, (entry) => 1 - entry.scale) / 1.3
+    );
+    // ...while digits, in the middle, roll harder than a capital and hold their shape longer.
+    expect(perPixel(byClass.digit, (entry) => entry.spin)).toBeGreaterThan(
+      perPixel(byClass.upper, (entry) => entry.spin) * 1.3
+    );
+    expect(perPixel(byClass.digit, (entry) => 1 - entry.scale)).toBeGreaterThan(
+      perPixel(byClass.upper, (entry) => 1 - entry.scale)
+    );
   });
 
   it('ignores touch input so a finger drag never tears the chain apart', () => {

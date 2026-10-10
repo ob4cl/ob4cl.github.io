@@ -4,9 +4,17 @@
  * Kept out of the component so the maths can be unit tested without a browser, and so the
  * component only has to worry about wiring it to pointer events and GSAP.
  *
- * Every glyph carries its own personality — direction, sensitivity and travel speed — so passing
- * the cursor over the chain frays it glyph by glyph instead of shoving it about in one piece.
+ * A glyph's personality starts with what the character IS. Digits, capitals, lowercase letters and
+ * symbols each break in their own register — digits are light and nervous, capitals heavy and
+ * deliberate, symbols the flightiest of all — and every glyph then gets its own jitter on top, so
+ * no two characters of the same kind ever move alike. Glyphs curve as they leave and shrink while
+ * they are thrown, so the ring comes apart into smaller pieces instead of inflating.
  */
+
+export type GlyphClass = 'digit' | 'upper' | 'lower' | 'symbol';
+
+/** A closed range to roll a trait inside: `[min, max]`. */
+export type Range = readonly [number, number];
 
 export interface GlyphHome {
   /** Resting position inside the artwork, in layout pixels. */
@@ -22,17 +30,96 @@ export interface GlyphHome {
   sense: number;
   /** This glyph's own travel rate, so nothing moves in lockstep. */
   rate: number;
+  /** The glyph class's weight, as a multiplier on the field's push. */
+  gain: number;
+  /** How freely this glyph tumbles, as a multiplier on the field's spin. */
+  tumble: number;
+  /** How far this glyph bends off a straight line, as a multiplier on the field's curl. */
+  curl: number;
+  /** How far this glyph retreats as it breaks, as a multiplier on the field's shrink. */
+  depth: number;
 }
+
+/** What each kind of character brings to the fracture. */
+export interface ClassTraits {
+  sense: Range;
+  gain: Range;
+  tumble: Range;
+  rate: Range;
+  /** Maximum direction offset either side of straight-away-from-the-cursor, in radians. */
+  angle: number;
+  curl: Range;
+  depth: Range;
+}
+
+/**
+ * The four registers. Every range is deliberately stretched, because the point of the effect is
+ * that a digit and the capital next to it do not leave together or in the same manner.
+ */
+export const GLYPH_CLASSES: Record<GlyphClass, ClassTraits> = {
+  // Digits: light and nervous. They notice the cursor early, drift a long way and tumble hard.
+  digit: {
+    sense: [1.05, 1.4],
+    gain: [0.7, 0.95],
+    tumble: [1.15, 1.6],
+    rate: [0.17, 0.34],
+    angle: 0.7,
+    curl: [0.8, 1.25],
+    depth: [1, 1.3]
+  },
+  // Capitals: the heavy links. They hold their line the longest, travel furthest, barely roll.
+  upper: {
+    sense: [0.6, 0.95],
+    gain: [1, 1.3],
+    tumble: [0.5, 0.85],
+    rate: [0.08, 0.2],
+    angle: 0.3,
+    curl: [0.25, 0.55],
+    depth: [0.7, 1]
+  },
+  // Lowercase letters: the middle register, between the capitals and the symbols.
+  lower: {
+    sense: [0.8, 1.15],
+    gain: [0.85, 1.1],
+    tumble: [0.8, 1.15],
+    rate: [0.12, 0.26],
+    angle: 0.5,
+    curl: [0.5, 0.85],
+    depth: [0.85, 1.15]
+  },
+  // Symbols: the flightiest. Wide scatter, quickest off the mark, they shrink the most.
+  symbol: {
+    sense: [1.1, 1.5],
+    gain: [0.6, 0.9],
+    tumble: [1.2, 1.7],
+    rate: [0.18, 0.38],
+    angle: 0.85,
+    curl: [1, 1.45],
+    depth: [1.1, 1.4]
+  }
+};
+
+/** The widest trait any class can roll, so callers can bound what the field is allowed to do. */
+export const FIELD_LIMITS = {
+  senseMax: Math.max(...Object.values(GLYPH_CLASSES).map((traits) => traits.sense[1])),
+  gainMax: Math.max(...Object.values(GLYPH_CLASSES).map((traits) => traits.gain[1])),
+  tumbleMax: Math.max(...Object.values(GLYPH_CLASSES).map((traits) => traits.tumble[1])),
+  depthMax: Math.max(...Object.values(GLYPH_CLASSES).map((traits) => traits.depth[1]))
+} as const;
 
 export interface FieldConfig {
   /** How far the cursor reaches, before each glyph's own sensitivity. */
   reach: number;
-  /** How far a glyph can be thrown from its resting place. */
+  /** How far a glyph can be thrown from its resting place, before its class weight. */
   push: number;
   /** Extra random throw at the centre of the fracture. */
   scatter: number;
   /** Rotation, in degrees, at the centre of the fracture. */
   spin: number;
+  /** How much a glyph shrinks at the centre of the fracture, before its own depth. */
+  shrink: number;
+  /** How far a thrown glyph bends off its straight line, in radians at the fracture centre. */
+  curl: number;
 }
 
 export interface ArtworkFrame {
@@ -53,25 +140,63 @@ export interface Displacement {
   x: number;
   y: number;
   rotation: number;
+  /** 1 while the glyph is at rest, smaller once it has broken away. */
+  scale: number;
 }
 
-export const NO_DISPLACEMENT: Displacement = { x: 0, y: 0, rotation: 0 };
+export const NO_DISPLACEMENT: Displacement = { x: 0, y: 0, rotation: 0, scale: 1 };
 
 /**
  * The field the hero chain uses. Deliberately restrained: a pixel or two of drift at the edge of
- * reach, rising to a short throw under the cursor, so the chain frays rather than shatters.
+ * reach, rising to a short throw under the cursor, while the pieces shrink — so the chain frays
+ * into smaller characters instead of shoving outwards.
  */
-export const CHAIN_FIELD: FieldConfig = { reach: 135, push: 18, scatter: 12, spin: 38 };
+export const CHAIN_FIELD: FieldConfig = {
+  reach: 130,
+  push: 15,
+  scatter: 9,
+  spin: 30,
+  shrink: 0.16,
+  curl: 0.5
+};
 
-/** Ranges used when giving each glyph its personality (see `GlyphHome`). */
-export const GLYPH_TRAITS = {
-  /** Maximum direction offset either side of straight-away-from-the-cursor, in radians. */
-  angle: 0.55,
-  senseMin: 0.72,
-  senseMax: 1.32,
-  rateMin: 0.1,
-  rateMax: 0.28
-} as const;
+const between = (range: Range, random: () => number): number =>
+  range[0] + random() * (range[1] - range[0]);
+
+/** Which register a character breaks in. Anything that is not a letter or a digit is a symbol. */
+export function glyphClass(character: string): GlyphClass {
+  if (/[0-9]/.test(character)) return 'digit';
+  if (/[a-z]/.test(character)) return 'lower';
+  if (/[A-Z]/.test(character)) return 'upper';
+  return 'symbol';
+}
+
+/**
+ * Build a glyph's personality from the character it shows: class first, then jitter within that
+ * class, so digits differ from letters, from symbols, and from each other.
+ */
+export function glyphHome(
+  character: string,
+  x: number,
+  y: number,
+  random: () => number = Math.random
+): GlyphHome {
+  const traits = GLYPH_CLASSES[glyphClass(character)];
+  return {
+    x,
+    y,
+    debrisX: random() * 2 - 1,
+    debrisY: random() * 2 - 1,
+    debrisSpin: random() * 2 - 1,
+    angle: (random() * 2 - 1) * traits.angle,
+    sense: between(traits.sense, random),
+    gain: between(traits.gain, random),
+    tumble: between(traits.tumble, random),
+    rate: between(traits.rate, random),
+    curl: between(traits.curl, random),
+    depth: between(traits.depth, random)
+  };
+}
 
 /**
  * Where the pointer sits in the artwork's own coordinate space. The artwork is rotated in CSS, so
@@ -106,18 +231,25 @@ export function glyphDisplacement(
   // Softer than linear: the glyphs under the cursor move most, their neighbours barely stir.
   const falloff = Math.pow(1 - distance / reach, 1.8);
 
-  // Radial direction, turned by the glyph's own angle so neighbours scatter apart from each other.
+  // Radial direction, turned by the glyph's own angle so neighbours scatter apart from each other,
+  // and bent further by its curl as it is thrown — pieces arc away, they do not slide on rails.
   const nx = distance > 0.01 ? dx / distance : Math.cos(home.angle);
   const ny = distance > 0.01 ? dy / distance : Math.sin(home.angle);
-  const cos = Math.cos(home.angle);
-  const sin = Math.sin(home.angle);
+  const turn = home.angle + home.curl * config.curl * falloff;
+  const cos = Math.cos(turn);
+  const sin = Math.sin(turn);
   const rx = nx * cos - ny * sin;
   const ry = nx * sin + ny * cos;
 
+  const thrown = config.push * home.gain * falloff;
+  const dust = config.scatter * falloff;
+
   return {
-    x: rx * config.push * falloff + home.debrisX * config.scatter * falloff,
-    y: ry * config.push * falloff + home.debrisY * config.scatter * falloff,
-    rotation: home.debrisSpin * config.spin * falloff
+    x: rx * thrown + home.debrisX * dust,
+    y: ry * thrown + home.debrisY * dust,
+    rotation: home.debrisSpin * config.spin * home.tumble * falloff,
+    // And it shrinks on the way out: the ring breaks apart into smaller characters.
+    scale: 1 - config.shrink * home.depth * falloff
   };
 }
 
@@ -131,15 +263,17 @@ export function easeToward(current: Displacement, target: Displacement, rate: nu
   const next = {
     x: current.x + (target.x - current.x) * rate,
     y: current.y + (target.y - current.y) * rate,
-    rotation: current.rotation + (target.rotation - current.rotation) * rate
+    rotation: current.rotation + (target.rotation - current.rotation) * rate,
+    scale: current.scale + (target.scale - current.scale) * rate
   };
   // Snap once the difference stops being visible, so the loop can settle and stop.
   if (Math.abs(target.x - next.x) < 0.03) next.x = target.x;
   if (Math.abs(target.y - next.y) < 0.03) next.y = target.y;
   if (Math.abs(target.rotation - next.rotation) < 0.03) next.rotation = target.rotation;
+  if (Math.abs(target.scale - next.scale) < 0.002) next.scale = target.scale;
   return next;
 }
 
 export function isDisplaced(value: Displacement): boolean {
-  return value.x !== 0 || value.y !== 0 || value.rotation !== 0;
+  return value.x !== 0 || value.y !== 0 || value.rotation !== 0 || value.scale !== 1;
 }

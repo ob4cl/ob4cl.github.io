@@ -6,8 +6,8 @@ import mark from '../assets/chain-mark.txt?raw';
 import {
   CHAIN_FIELD,
   easeToward,
-  GLYPH_TRAITS,
   glyphDisplacement,
+  glyphHome,
   isDisplaced,
   NO_DISPLACEMENT,
   toArtworkSpace,
@@ -67,19 +67,11 @@ export default function AsciiChain({
       const spans = Array.from(art.querySelectorAll<HTMLElement>('.chain-glyph'));
       if (!spans.length) return;
 
-      const homes: GlyphHome[] = spans.map((span) => ({
-        x: span.offsetLeft,
-        y: span.offsetTop,
-        debrisX: Math.random() * 2 - 1,
-        debrisY: Math.random() * 2 - 1,
-        debrisSpin: Math.random() * 2 - 1,
-        // Each glyph gets its own direction, sensitivity and speed, so the chain frays unevenly.
-        angle: (Math.random() * 2 - 1) * GLYPH_TRAITS.angle,
-        sense:
-          GLYPH_TRAITS.senseMin +
-          Math.random() * (GLYPH_TRAITS.senseMax - GLYPH_TRAITS.senseMin),
-        rate: GLYPH_TRAITS.rateMin + Math.random() * (GLYPH_TRAITS.rateMax - GLYPH_TRAITS.rateMin)
-      }));
+      const homes: GlyphHome[] = spans.map((span) =>
+        // Each character brings its own register — digits, capitals, lowercase letters and symbols
+        // break differently — and then its own jitter on top of that.
+        glyphHome(span.textContent ?? '', span.offsetLeft, span.offsetTop)
+      );
       const offsets: Displacement[] = spans.map(() => ({ ...NO_DISPLACEMENT }));
       const applied: boolean[] = spans.map(() => false);
       const cursor = { x: 0, y: 0, active: false };
@@ -131,6 +123,7 @@ export default function AsciiChain({
               x: offset.x,
               y: offset.y,
               rotation: offset.rotation,
+              scale: offset.scale,
               force3D: false
             });
             moving = true;
