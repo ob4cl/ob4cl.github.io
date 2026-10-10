@@ -2,6 +2,7 @@
   "passed": [
     "Five projects",
     "ASCII chain pointer interaction",
+    "ASCII chain break-apart shrinks the pieces, curves the throw and gives digits/letters/symbols their own register",
     "Five modal open/close flows",
     "Keyboard focus traps and focus restoration",
     "Motion toggle and saved preference",
