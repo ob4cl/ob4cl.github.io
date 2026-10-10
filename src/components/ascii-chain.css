@@ -1,0 +1,16 @@
+.ascii-chain { position: relative; min-width: 0; padding: 1.1rem 0; perspective: 900px; }
+.ascii-chain__coordinate, .ascii-chain__caption { font: 500 0.6rem/1.5 var(--font-mono); letter-spacing: .13em; color: var(--muted); }
+.ascii-chain__coordinate { position: absolute; top: 0; right: 0; }
+.ascii-chain__art { position: relative; width: 100%; container-type: inline-size; }
+.ascii-chain__art pre { margin: 0; width: max-content; white-space: pre; font-family: 'Courier New', monospace; font-size: 1.78cqw; line-height: 1.09; font-weight: 600; letter-spacing: 0; color: #dedfce; transform: rotate(-13deg); transform-origin: center; background: linear-gradient(135deg, #89927e 5%, #eff3e5 32%, #b1bb98 49%, #eff3e5 60%, #727e61 92%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.ascii-chain__center { position: absolute; inset: 39% 20% auto; text-align: center; color: var(--muted); font: 400 .63rem/1.7 var(--font-mono); letter-spacing: .18em; pointer-events: none; }
+.ascii-chain__center b { font-weight: 500; color: var(--paper); }
+.ascii-chain__center i { display: block; font: 500 1.4rem/1.5 var(--font-display); letter-spacing: -.08em; color: var(--acid); padding-top: .7rem; }
+.ascii-chain__caption { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+.ascii-chain.is-live .ascii-chain__art pre { background-size: 180% 180%; animation: chain-light 10s ease-in-out infinite alternate; }
+@keyframes chain-light { from { background-position: 0% 20%; } to { background-position: 100% 75%; } }
+.ascii-chain-mark { display: block; width: 76px; flex: none; overflow: hidden; color: var(--acid); }
+.ascii-chain-mark pre { margin: 0; font: 600 2.32px/1 'Courier New',monospace; white-space: pre; letter-spacing: 0; }
+@media (max-width: 600px) { .ascii-chain__center { font-size: .56rem; } .ascii-chain__caption, .ascii-chain__coordinate { font-size: .55rem; } .ascii-chain-mark { width: 58px; } .ascii-chain-mark pre { font-size: 1.8px; } }
+@media (prefers-reduced-motion: reduce) { .ascii-chain.is-live .ascii-chain__art pre { animation: none; } }
+html[data-motion='off'] .ascii-chain__art pre { animation: none; }

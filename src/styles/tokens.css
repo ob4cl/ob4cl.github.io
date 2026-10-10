@@ -1,0 +1,89 @@
+/* ------------------------------------------------------------------------------------------------
+   ob4cl — design tokens
+   Dark editorial: warm near-black paper-stock background, off-white type, one electric chartreuse
+   accent. Nothing else competes for attention.
+   ------------------------------------------------------------------------------------------------ */
+
+:root {
+  color-scheme: dark;
+
+  /* surfaces */
+  --ink: #0a0b09;
+  --ink-2: #101310;
+  --ink-3: #171b16;
+  --ink-4: #1e231d;
+
+  /* type on ink */
+  --paper: #f2efe4;
+  --paper-dim: #cec9b9;
+  --muted: #a3a695;
+
+  /* lines */
+  --rule: rgba(242, 239, 228, 0.14);
+  --rule-strong: rgba(242, 239, 228, 0.3);
+
+  /* the single accent */
+  --acid: #d8ff3e;
+  --acid-deep: #a9cc2b;
+  --ink-on-acid: #0a0b09;
+
+  /* severity scale (modelguard + risk radar) */
+  --sev-critical: #ff6f52;
+  --sev-high: #ffa257;
+  --sev-medium: #ffd166;
+  --sev-low: #9ecbff;
+  --sev-info: #a3a695;
+  --sev-pass: var(--acid);
+
+  /* type */
+  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-serif: 'Fraunces Variable', Fraunces, Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --step--1: clamp(0.78rem, 0.74rem + 0.2vw, 0.86rem);
+  --step-0: clamp(0.94rem, 0.9rem + 0.25vw, 1.06rem);
+  --step-1: clamp(1.12rem, 1rem + 0.6vw, 1.4rem);
+  --step-2: clamp(1.4rem, 1.15rem + 1.2vw, 2.1rem);
+  --step-3: clamp(1.9rem, 1.4rem + 2.4vw, 3.4rem);
+  --step-4: clamp(2.4rem, 1.5rem + 4.4vw, 5.4rem);
+  --step-5: clamp(3rem, 1.2rem + 8vw, 8rem);
+
+  /* rhythm */
+  --gutter: clamp(1.15rem, 4.5vw, 4.5rem);
+  --section-y: clamp(4.5rem, 11vh, 9rem);
+  --rail-w: 78px;
+  --measure: 62ch;
+
+  /* shape */
+  --r-sm: 7px;
+  --r-md: 14px;
+  --r-lg: 26px;
+  --r-full: 999px;
+
+  /* motion */
+  --dur-fast: 160ms;
+  --dur: 280ms;
+  --dur-slow: 620ms;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Stillness is a first-class state: an explicit toggle and the OS preference both land here. */
+html[data-motion='off'] *,
+html[data-motion='off'] *::before,
+html[data-motion='off'] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-motion='on']) *,
+  html:not([data-motion='on']) *::before,
+  html:not([data-motion='on']) *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

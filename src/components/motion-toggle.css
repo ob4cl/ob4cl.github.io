@@ -1,0 +1,72 @@
+.motion-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  padding: 0.3rem 0.75rem 0.3rem 0.4rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-full);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition:
+    border-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+
+.motion-toggle:hover {
+  border-color: var(--rule-strong);
+  color: var(--paper);
+}
+
+.motion-toggle__track {
+  position: relative;
+  width: 32px;
+  height: 18px;
+  border-radius: var(--r-full);
+  background: rgba(242, 239, 228, 0.12);
+  border: 1px solid var(--rule);
+  flex: none;
+}
+
+.motion-toggle__knob {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background: var(--muted);
+  transition:
+    transform var(--dur) var(--ease),
+    background-color var(--dur) var(--ease);
+}
+
+.motion-toggle[aria-pressed='true'] {
+  color: var(--paper);
+  border-color: var(--rule-strong);
+}
+
+.motion-toggle[aria-pressed='true'] .motion-toggle__knob {
+  transform: translateX(14px);
+  background: var(--acid);
+}
+
+.motion-toggle__label {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.motion-toggle__state {
+  color: var(--acid);
+  font-weight: 600;
+}
+
+.motion-toggle[aria-pressed='false'] .motion-toggle__state {
+  color: var(--muted);
+}

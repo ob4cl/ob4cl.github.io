@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" class="no-js" data-motion="on">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ob4cl — selected work</title>
+    <meta
+      name="description"
+      content="ob4cl — open-source tooling for developers: scaffolding, dependency risk, ML supply-chain security, and privacy-first apps. A dark editorial gallery of four builds plus Taunton Web Co."
+    />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0a0b09" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0b09'/%3E%3Ctext x='32' y='45' font-family='monospace' font-size='40' font-weight='700' text-anchor='middle' fill='%23d8ff3e'%3Eo%3C/text%3E%3C/svg%3E"
+    />
+    <script>
+      // Progressive enhancement + motion preference, applied before first paint.
+      (function () {
+        var root = document.documentElement;
+        root.classList.remove('no-js');
+        root.classList.add('has-js');
+        var stored = null;
+        try {
+          stored = window.localStorage.getItem('ob4cl.motion');
+        } catch (err) {
+          stored = null;
+        }
+        var reduced = false;
+        try {
+          reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        } catch (err) {
+          reduced = false;
+        }
+        root.setAttribute('data-motion', stored === 'off' || (stored !== 'on' && reduced) ? 'off' : 'on');
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div class="noscript">
+        <h1>ob4cl — selected work</h1>
+        <p>
+          This gallery is animated with JavaScript. The projects are listed below; every link is a
+          plain, working link.
+        </p>
+        <ul>
+          <li><a href="https://github.com/ob4cl/Forgix">Forgix — CLI project scaffolding</a></li>
+          <li><a href="https://github.com/ob4cl/CindR">CindR — privacy-first subscription tracker</a></li>
+          <li>
+            <a href="https://github.com/ob4cl/dependency-risk-radar"
+              >dependency-risk-radar — deterministic dependency gate</a
+            >
+          </li>
+          <li><a href="https://github.com/ob4cl/modelguard">modelguard — ML supply-chain scanner</a></li>
+          <li><a href="https://tauntonwebco.co.uk">Taunton Web Co. — independent web design</a></li>
+        </ul>
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

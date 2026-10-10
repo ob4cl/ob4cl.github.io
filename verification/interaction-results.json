@@ -1,0 +1,33 @@
+{
+  "passed": [
+    "Five projects",
+    "ASCII chain pointer interaction",
+    "Five modal open/close flows",
+    "Keyboard focus traps and focus restoration",
+    "Motion toggle and saved preference",
+    "Work navigation"
+  ],
+  "dialogs": [
+    {
+      "id": "forgix",
+      "violations": []
+    },
+    {
+      "id": "cindr",
+      "violations": []
+    },
+    {
+      "id": "dependency-risk-radar",
+      "violations": []
+    },
+    {
+      "id": "modelguard",
+      "violations": []
+    },
+    {
+      "id": "taunton-web-co",
+      "violations": []
+    }
+  ],
+  "errors": []
+}

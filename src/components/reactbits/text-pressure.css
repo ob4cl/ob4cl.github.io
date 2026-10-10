@@ -1,0 +1,13 @@
+/* React Bits — TextPressure (adapted). See /THIRD-PARTY-NOTICES.md */
+.text-pressure-title {
+  color: var(--rb-text-pressure-color, #fff);
+}
+
+.text-pressure-title.tp-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-pressure-stroke .tp-char {
+  position: relative;
+}

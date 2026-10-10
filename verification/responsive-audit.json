@@ -1,0 +1,884 @@
+[
+  {
+    "width": 1440,
+    "errors": [],
+    "title": "ob4cl — selected work",
+    "headings": [
+      "ob4cl — developer tooling, security infrastructure and local web design",
+      "Selected work",
+      "Selected work",
+      "Forgix",
+      "CindR",
+      "dependency-risk-radar",
+      "modelguard",
+      "Taunton Web Co.",
+      "Four rules that survive contact with production",
+      "Deterministic before clever",
+      "Local-first, explicit trust boundaries",
+      "Limits belong in the README",
+      "Motion is optional, accessibility is not",
+      "The code lives on GitHub.The websites live in Somerset.",
+      "Projects",
+      "Built-with notices",
+      "Preferences"
+    ],
+    "scrollWidth": 1440,
+    "bodyText": "SKIP TO THE WORK\n   9@@@@9Gh5S#999@@@&MS&@@@&#M3A#9999@@&G5#@@@@BGh5\n H#GSSGHM352X;2hM9@@@S9GSSHHM32Ash3hG&@9H#9SSGHHh5AAi\n MGhAsi;isXAXiXi;rAhMGH5si;;isXAs;r;;r5GMShAsi;isXAXi\n hAs;     ;rri      h5s;      rrr;      hAs;     ;rri\n Xr;r     M@&#      #9HA      #@&M      995;     HXri;\n sr;X5M9@&XG9@@&#S#BSMsiA3H9&9HG@@&#S#B9M2s;5MG@@G3si\n rrrX2MG@GM2G@@B#SGMh3;sA5hSSS3h@@&9SSHh3X;X2hM@GMAi;\n   isX2h5As;;X3h355Xi;;rsA3h5si;s553552X;;;sXA35As;\n       ;         ;         ;        ;         ;\n\nob4cl\nWORK\nAPPROACH\nCONTACT\nMOTION\nOFF\nGITHUB\n↗\nThis gallery presents 5 selected projects.\n\nINDEPENDENT DEVELOPER / SELECTED WORK\n\nob4cl — developer tooling, security infrastructure and local web design\nob4cl\n\nCuriosity.\nMade functional.\n\nI build developer tools, security experiments and websites. This is a collection of the things I’ve made.\n\nExplore the work\n↘\nFIG. 001 / IDENTITY\n                                     #B@&S@SGHHMM3552X\n                           G9@@@#@&HHGSGShh55A225252AXr;252hHHM2\n                        #@&SS###M35hhAs;s         Sirrr;;rA53M9@@G2\n                      9&#33hAi;    A@@S2;23MHS#B&BM&@9M;    ;AhB@@@@5\n                    hhh5A2;;     #@BG22s;253MGSSS9rG&B@@H3     ;3&#GGHM\n                #B#H52XXHM;H#9@@##ShhX; ;;iisssii;; 5G@BBSSSHMMMHSSGG&&@@9M\n              &@BHM2Ar;BM&@##@@##hA;;                 ;A3HGHHM5555s223SS@@@B3\n            #@HHG2;;  r25332XXr;;                         ;;irrrsr;;;  ;5GBSG3X\n           GH#H2;    GG5As;                                     55ArXr    2MHM5s\n          MHH5r;   S@9G3s;                                       2552HhA   r535X;\n          h55r   SB&HG3r                                           3H9@@9H   5AX;\n        #B2Xs;Hs22553r;                                             s3B&&B&H#3AX;22\n      ##HMirG@9GXAr;                                                   s3SS@@3s;;sXAA\n     9#G2r;;h#@92                                                         9@@X;;;;rA2A\n    #9Mhi;   &@SX                                                         #@@2   ;A55hA\n   G@Bhi    G@9hr                                                         G@#hr    3GBhi\n   #@@2;   G@SS2;                                                         h#GH5i   3&@#X\n   G@@h   #B#G5;                                                           5MM32X   9BSr\n   h#@9#B99#5X;                                                             X252AA23MhX;\n    SGMG9h3X;                                                                 rsXXAX@9G\n  #@B2sXi;;s                                                                   S;;;SH&@95\n #@B3s;;;irXr                                                                 GG5s;;5H@@SX\n 99HX;   XAAs;                                                               hGhA;   2S@@A\n #Ghs    3h3A;                                                               MSh2;    G9SA;\n #Ghs    S@92;                                                               hB@Hs    G9SA\n h35X;   @@Hs;                                                               2H@@M   GGHMr\n 252AsXHGGMXi                                                                 M#@&S3SGM3X;\n  sXXXXs9SMi                                                                   MGHMHSHXs;\n    ;;;SH@@@H                                                                 BBH3sXAi;\n   HM2rr5HS&@G2                                                             #@@5As;;;iri\n   M2X;   2S@BGX                                                           S@ShA;   sssi\n   M52r;   AG#S5;                                                         H&HGA;   Mh2Ai\n   hHhG2    3HH5i                                                         H#M2;    &Bh2;\n    hB@@Hi   M32i                                                         Mh3s   H@SShi\n     h&&@9G5GM2A;                                                         522rrMGGH55i\n      2S&BG9H3si;255                                                   9@9sXXsrGrA2A;\n        r59&SA;;rXA233A                                             S@9#SGh;;9@@2;;\n          S@@3   ;rA3MG3                                           @@SH2r;   @9Hs\n          G&@B3;   r3S@@Mr                                       S@93Ms;   3@@H2i\n           H@9#H2    3B@@H;                                     H@@h2;    9@#MHr\n            5HGGM35A  S#B@@@@@9H5                         HS#SSH355As  H@@SS#A;\n              A33325253HBGG&&GH#GSH3s                 HB@BHH3533AA2s@@B&HGh2;\n                ;rXXAAAA;;;;;rA3GHMh52s S#99BB&##GM S9S9HHH2r;;;X;;##GS32r;\n                    ;;;;;ssi     rA552Xi;2hMHSB&@95HH#M3r;     HSM2;;;;\n                      XXXX23MMM    &AAXr;i;;;;;sA3hh2s;3    S@@9GM2A;\n                        rA3hH9B&@@2S@@&M;         2#9S5s;333hMHH3r;\n                           ;rAhS&GHMG99@@@@@@@@&SGh32As;XA55Ar;;\n                                     A3h#@GB#SSH3h5s;;\n                                             ;\n\nINDEPENDENT\nBY DESIGN.\nob4cl\nCUBAN LINK / ASCII\nSIGNATURE MARK\n\nFOUR REPOSITORIES.\nONE INDEPENDENT STUDIO.\n\nDEVELOPER TOOLING\nSUPPLY-CHAIN SECURITY\nML SECURITY\nPRIVACY-FIRST APPS\nWEB DESIGN\nSCROLL TO THE WORK\n(5 PROJECTS: FORGIX, CINDR, DEPENDENCY-RISK-RADAR, MODELGUARD, TAUNTON WEB CO.)\n\nBUILT TO BE EXPLORED/01—05\n\nTHE GALLERY\n\nSelected work\nSelected work\n\nA project starter, a private subscription tracker, two security tools, and my web design studio. Open a project to see how it works, or head straight to the source.\n\nINDEX 01—05\n4 REPOSITORIES\n1 STUDIO\n\nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \n\nINDEX\n\n01\nForgix\n02\nCindR\n03\ndependency-risk-radar\n04\nmodelguard\n05\nTaunton Web Co.\n\n01\n\n01\n/\nCLI TOOLING\n\nForgix\n\nStart a project once, not forty times.\n\nA scaffolding CLI with template versioning, post-scaffold hooks and governance checks. It copies a template into a new directory, injects variables, runs the package manager and writes a lock file that records where the project came from.\n\nLANGUAGE\nTypeScript\nLICENCE\nMIT\nRUNTIME\nNode.js >= 22\nINSTALL\nnpm install -g @fourlinx/forgix\nCLI\nTEMPLATES\nNON-INTERACTIVE MODE\nREPOSITORY\n↗\nPROJECT DETAILS\n↵\nTypeScript\nNode.js\nnpm registry\nYAML hooks\nGitHub Actions\n$ npx @fourlinx/forgix create my-app -t react-vite --ts --ci\n    Preview — files that would be created/modified:\n\n    src/\n    + src/index.ts 1.2KB\n    + src/App.tsx 0.8KB\n    + package.json 0.5KB\n\n    Summary:\n      + 15 files to create\n      3 directories\n      Total: 12.4KB\nDRY-RUN PREVIEW AS DOCUMENTED IN THE FORGIX README.\n\n02\n\n02\n/\nPRODUCT APP\n\nCindR\n\nYour subscription data never leaves the browser.\n\nA subscription tracker with no accounts and no server. Add subscriptions, read the monthly figure, watch renewals coming — with everything stored in the browser's IndexedDB and exportable as JSON.\n\nLANGUAGE\nTypeScript\nLICENCE\nMIT\nSTORAGE\nIndexedDB — no backend\nSHIP TARGETS\nWeb, Android, iOS, Windows\nPWA\nOFFLINE\nNO ACCOUNTS\nNO TRACKING\nREPOSITORY\n↗\nLIVE APP\n↗\nPROJECT DETAILS\n↵\nReact 19\nTypeScript\nVite\nTailwind CSS v4\nRecharts\nIndexedDB\nCapacitor\nTauri\nNetlify\nYOUR BROWSER\nReact 19 · IndexedDB\nJSON EXPORT\nTHIS DEVICE ONLY\ninstallable PWA\nCLOUD SYNC\nNOT BUILT\n\nNo server, no account, no tracking — CindR ships as a browser-only app that also builds to Android, iOS and Windows.\n\n03\n\n03\n/\nCI / SUPPLY CHAIN\n\ndependency-risk-radar\n\nOne pre-merge question, answered deterministically.\n\nA dependency-change gate for platform teams: does this dependency delta violate our risk policy? It diffs direct dependencies between two refs, scores transitive impact against explicit policy, and returns a decision a pipeline can act on.\n\nLANGUAGE\nTypeScript\nLICENCE\nMIT\nECOSYSTEMS (V1)\nnpm, pnpm\nSURFACES\nCLI, GitHub Action, MCP server\nDETERMINISTIC\nPOLICY-FIRST\nEXIT-CODE CONTRACT\nREPOSITORY\n↗\nPROJECT DETAILS\n↵\nTypeScript\npnpm monorepo\nGitHub Actions\nMCP\nCycloneDX\nOSV / npm registry metadata\npolicy files\nPASS\nsafe to proceed under policy\nWARN\nmerge allowed, reviewer attention\nHIGH-RISK\nexplicit approval / escalation\nFAIL\nblocked by policy or critical\n\nFour documented outcomes, produced by the same refs and policy every time.\n\n04\n\n04\n/\nML SECURITY\n\nmodelguard\n\nGhosts in the weights.\n\nAn ML supply-chain scanner: backdoored weights, poisoned layers and adversarial triggers, found before a model is loaded rather than after. Trivy for neural networks — weight-level inspection and behavioural testing in the same tool.\n\nLANGUAGE\nPython 3.10+\nLICENCE\nMIT\nSTATUS\nAlpha\nINSTALL\npip install modelguard\nWEIGHT SCAN\nACTIVATION SCAN\nBEHAVIOURAL PROBES\nSBOM\nREPOSITORY\n↗\nPROJECT DETAILS\n↵\nPython\nsafetensors\nGGUF\nPyTorch\nCycloneDX 1.5\nHuggingFace Hub\nCRITICAL\nHIGH\nMEDIUM\nLOW\nMG-WEIGHT-002\nCRITICAL\nNaN / Inf values in tensors\nMG-WEIGHT-006\nHIGH\nanomalous embedding vectors\nMG-2024-0005\nCRITICAL\nmalicious pickle payload (RCE)\n\nA map of ModelGuard's documented severities, not a measurement of any model.\n\n05\n\n05\n/\nINDEPENDENT STUDIO\n\nTaunton Web Co.\n\nBuilt locally. Made to stand out.\n\nIndependent web design in Taunton, Somerset, for small businesses — trades, salons, garages, clinics and shops that need to be found and to look the part. Every plan starts with a free homepage mock-up: you only pay once you are happy with it.\n\nBASED\nTaunton, Somerset\nPLANS\nKickstart · Kickstart + Care · Custom\nSTARTING POINT\nFree homepage mock-up\nCARE PLAN\nHosting, backups, security, small edits\nWEB DESIGN\nSMALL BUSINESS\nSOMERSET\nTAUNTONWEBCO.CO.UK\n↗\nPROJECT DETAILS\n↵\nMobile-first design\nLocal SEO foundations\nAccessible markup\nStatic hosting\ntauntonwebco.co.uk\n\nINDEPENDENT WEB DESIGN · TAUNTON, SOMERSET\n\nSmall business. Standout website. Every plan starts with a free homepage mock-up — you pay once you are happy with it.\n\nKickstart\nKickstart + Care\nCustom\ntauntonwebco.co.uk\n↗\n\nVisit the studio for web design, maintenance and current packages.\n\nTHE APPROACH\n\nFour rules that survive contact with production\n01\nDeterministic before clever\n\nA gate that cannot be reproduced is not a gate. The analysis core answers the same way for the same inputs, and the policy that decides the outcome is a file in the repository — reviewable, versioned, diffable.\n\ndependency-risk-radar: same refs + same policy = same decision · Forgix: --dry-run preview and a lock file per scaffold.\n\n02\nLocal-first, explicit trust boundaries\n\nData stays where it was created unless exporting is the point. Where a tool has to touch the machine, the boundary is stated and enforced rather than implied.\n\nCindR: IndexedDB, no accounts, no cloud sync · Forgix: 0600 config, path traversal blocked, sensitive directories refused · modelguard: format handlers that inspect artefacts without executing them.\n\n03\nLimits belong in the README\n\nEvery one of these projects publishes what it does not do — JavaScript-only v1 ecosystems, an alpha signature registry, a tracker that will not cancel your subscriptions. The honest version is more useful than the impressive one.\n\ndependency-risk-radar: pre-1.0, no multi-workspace discovery · modelguard: curated signatures, absence is not proof of safety · CindR: no bank linking, no auto-cancellation.\n\n04\nMotion is optional, accessibility is not\n\nThis page animates with GSAP, Lenis smooth scroll and canvas treatments — and it will hold completely still if you or your operating system ask it to. Every canvas is decorative, every control is keyboard reachable, and every detail panel is a labelled dialog.\n\nUse the Motion control in the header: one click replaces animation with stills and restores native scrolling.\n\nELSEWHERE\n\nThe code lives on GitHub.\nThe websites live in Somerset.\ngithub.com/ob4cl\n↗\ntauntonwebco.co.uk\n↗\n\nIndependent projects, open source and a small web design studio. Explore the repositories to see what I’m building, or visit Taunton Web Co. for website enquiries.\n\nPROJECTS\nForgix\nCindR\ndependency-risk-radar\nmodelguard\nTaunton Web Co.\nBUILT-WITH NOTICES\nReact Bits\nMIT + Commons Clause v1.0 · © 2026 David Haz\nGSAP\nStandard \"no charge\" licence · GreenSock / Webflow\nLenis\nMIT · darkroom.engineering\nogl\nUnlicense · public domain\nMotion\nMIT · Motion B.V.\nTypefaces\nBricolage Grotesque, Fraunces, IBM Plex Mono · SIL OFL 1.1\nPREFERENCES\nMOTION\nOFF\n\nAnimation is opt-out. With motion off, Lenis smooth scrolling and every canvas treatment is skipped and the page scrolls natively.\n\nOB4CL\n\n© 2026 ob4cl · React + TypeScript + Vite · GSAP + Lenis + React Bits (adapted) · self-hosted fonts\n\nNo cookies, no analytics, no third-party requests. Content sourced from each project's own README and repository metadata.",
+    "buttons": [
+      {
+        "text": "Motionoff",
+        "label": null,
+        "pressed": "false"
+      },
+      {
+        "text": "01Forgix",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "02CindR",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "03dependency-risk-radar",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "04modelguard",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "05Taunton Web Co.",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Motionoff",
+        "label": null,
+        "pressed": "false"
+      }
+    ],
+    "links": [
+      {
+        "text": "Skip to the work",
+        "href": "#works"
+      },
+      {
+        "text": "   9@@@@9Gh5S#999@@@&MS&@@@&#M3A#9999@@&G5#@@@@BGh5\n H#GSSGHM352X;2hM9@@@S9GSSHHM32Ash3hG&@9H#9SSGHHh5AAi\n MGhAsi;isXAXiXi;rAhMGH5si;;isXAs;r;;r5GMShAsi;isXAXi\n hAs;     ;rri      h5s;      rrr;      hAs;     ;rri\n Xr;r     M@&#      #9HA      #@&M      995;     HXri;\n sr;X5M9@&XG9@@&#S#BSMsiA3H9&9HG@@&#S#B9M2s;5MG@@G3si\n rrrX2MG@GM2G@@B#SGMh3;sA5hSSS3h@@&9SSHh3X;X2hM@GMAi;\n   isX2h5As;;X3h355Xi;;rsA3h5si;s553552X;;;sXA35As;\n       ;         ;         ;        ;         ;\nob4cl",
+        "href": "#top"
+      },
+      {
+        "text": "Work",
+        "href": "#works"
+      },
+      {
+        "text": "Approach",
+        "href": "#approach"
+      },
+      {
+        "text": "Contact",
+        "href": "#contact"
+      },
+      {
+        "text": "GitHub ↗",
+        "href": "https://github.com/ob4cl"
+      },
+      {
+        "text": "Explore the work ↘",
+        "href": "#works"
+      },
+      {
+        "text": "Scroll to the work (5 projects: Forgix, CindR, dependency-risk-radar, modelguard, Taunton Web Co.)",
+        "href": "#works"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/Forgix"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/CindR"
+      },
+      {
+        "text": "Live app ↗",
+        "href": "https://silver-narwhal-35c66e.netlify.app"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/dependency-risk-radar"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/modelguard"
+      },
+      {
+        "text": "tauntonwebco.co.uk ↗",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "tauntonwebco.co.uk",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "tauntonwebco.co.uk ↗",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "github.com/ob4cl ↗",
+        "href": "https://github.com/ob4cl"
+      },
+      {
+        "text": "tauntonwebco.co.uk ↗",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "Forgix",
+        "href": "https://github.com/ob4cl/Forgix"
+      },
+      {
+        "text": "CindR",
+        "href": "https://github.com/ob4cl/CindR"
+      },
+      {
+        "text": "dependency-risk-radar",
+        "href": "https://github.com/ob4cl/dependency-risk-radar"
+      },
+      {
+        "text": "modelguard",
+        "href": "https://github.com/ob4cl/modelguard"
+      },
+      {
+        "text": "Taunton Web Co.",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "React Bits",
+        "href": "https://github.com/DavidHDev/react-bits"
+      },
+      {
+        "text": "GSAP",
+        "href": "https://gsap.com"
+      },
+      {
+        "text": "Lenis",
+        "href": "https://github.com/darkroomengineering/lenis"
+      },
+      {
+        "text": "ogl",
+        "href": "https://github.com/oframe/ogl"
+      },
+      {
+        "text": "Motion",
+        "href": "https://motion.dev"
+      },
+      {
+        "text": "Typefaces",
+        "href": "https://fontsource.org"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/taunton-webco.webp",
+        "loaded": true,
+        "alt": "The Taunton Web Co. homepage, featuring its web design service and Somerset landscape"
+      }
+    ],
+    "overflows": [],
+    "a11y": []
+  },
+  {
+    "width": 768,
+    "errors": [],
+    "title": "ob4cl — selected work",
+    "headings": [
+      "ob4cl — developer tooling, security infrastructure and local web design",
+      "Selected work",
+      "Selected work",
+      "Forgix",
+      "CindR",
+      "dependency-risk-radar",
+      "modelguard",
+      "Taunton Web Co.",
+      "Four rules that survive contact with production",
+      "Deterministic before clever",
+      "Local-first, explicit trust boundaries",
+      "Limits belong in the README",
+      "Motion is optional, accessibility is not",
+      "The code lives on GitHub.The websites live in Somerset.",
+      "Projects",
+      "Built-with notices",
+      "Preferences"
+    ],
+    "scrollWidth": 768,
+    "bodyText": "SKIP TO THE WORK\n   9@@@@9Gh5S#999@@@&MS&@@@&#M3A#9999@@&G5#@@@@BGh5\n H#GSSGHM352X;2hM9@@@S9GSSHHM32Ash3hG&@9H#9SSGHHh5AAi\n MGhAsi;isXAXiXi;rAhMGH5si;;isXAs;r;;r5GMShAsi;isXAXi\n hAs;     ;rri      h5s;      rrr;      hAs;     ;rri\n Xr;r     M@&#      #9HA      #@&M      995;     HXri;\n sr;X5M9@&XG9@@&#S#BSMsiA3H9&9HG@@&#S#B9M2s;5MG@@G3si\n rrrX2MG@GM2G@@B#SGMh3;sA5hSSS3h@@&9SSHh3X;X2hM@GMAi;\n   isX2h5As;;X3h355Xi;;rsA3h5si;s553552X;;;sXA35As;\n       ;         ;         ;        ;         ;\n\nob4cl\nMOTION\nOFF\nGITHUB\n↗\nThis gallery presents 5 selected projects.\n\nINDEPENDENT DEVELOPER / SELECTED WORK\n\nob4cl — developer tooling, security infrastructure and local web design\nob4cl\n\nCuriosity.\nMade functional.\n\nI build developer tools, security experiments and websites. This is a collection of the things I’ve made.\n\nExplore the work\n↘\nFIG. 001 / IDENTITY\n                                     #B@&S@SGHHMM3552X\n                           G9@@@#@&HHGSGShh55A225252AXr;252hHHM2\n                        #@&SS###M35hhAs;s         Sirrr;;rA53M9@@G2\n                      9&#33hAi;    A@@S2;23MHS#B&BM&@9M;    ;AhB@@@@5\n                    hhh5A2;;     #@BG22s;253MGSSS9rG&B@@H3     ;3&#GGHM\n                #B#H52XXHM;H#9@@##ShhX; ;;iisssii;; 5G@BBSSSHMMMHSSGG&&@@9M\n              &@BHM2Ar;BM&@##@@##hA;;                 ;A3HGHHM5555s223SS@@@B3\n            #@HHG2;;  r25332XXr;;                         ;;irrrsr;;;  ;5GBSG3X\n           GH#H2;    GG5As;                                     55ArXr    2MHM5s\n          MHH5r;   S@9G3s;                                       2552HhA   r535X;\n          h55r   SB&HG3r                                           3H9@@9H   5AX;\n        #B2Xs;Hs22553r;                                             s3B&&B&H#3AX;22\n      ##HMirG@9GXAr;                                                   s3SS@@3s;;sXAA\n     9#G2r;;h#@92                                                         9@@X;;;;rA2A\n    #9Mhi;   &@SX                                                         #@@2   ;A55hA\n   G@Bhi    G@9hr                                                         G@#hr    3GBhi\n   #@@2;   G@SS2;                                                         h#GH5i   3&@#X\n   G@@h   #B#G5;                                                           5MM32X   9BSr\n   h#@9#B99#5X;                                                             X252AA23MhX;\n    SGMG9h3X;                                                                 rsXXAX@9G\n  #@B2sXi;;s                                                                   S;;;SH&@95\n #@B3s;;;irXr                                                                 GG5s;;5H@@SX\n 99HX;   XAAs;                                                               hGhA;   2S@@A\n #Ghs    3h3A;                                                               MSh2;    G9SA;\n #Ghs    S@92;                                                               hB@Hs    G9SA\n h35X;   @@Hs;                                                               2H@@M   GGHMr\n 252AsXHGGMXi                                                                 M#@&S3SGM3X;\n  sXXXXs9SMi                                                                   MGHMHSHXs;\n    ;;;SH@@@H                                                                 BBH3sXAi;\n   HM2rr5HS&@G2                                                             #@@5As;;;iri\n   M2X;   2S@BGX                                                           S@ShA;   sssi\n   M52r;   AG#S5;                                                         H&HGA;   Mh2Ai\n   hHhG2    3HH5i                                                         H#M2;    &Bh2;\n    hB@@Hi   M32i                                                         Mh3s   H@SShi\n     h&&@9G5GM2A;                                                         522rrMGGH55i\n      2S&BG9H3si;255                                                   9@9sXXsrGrA2A;\n        r59&SA;;rXA233A                                             S@9#SGh;;9@@2;;\n          S@@3   ;rA3MG3                                           @@SH2r;   @9Hs\n          G&@B3;   r3S@@Mr                                       S@93Ms;   3@@H2i\n           H@9#H2    3B@@H;                                     H@@h2;    9@#MHr\n            5HGGM35A  S#B@@@@@9H5                         HS#SSH355As  H@@SS#A;\n              A33325253HBGG&&GH#GSH3s                 HB@BHH3533AA2s@@B&HGh2;\n                ;rXXAAAA;;;;;rA3GHMh52s S#99BB&##GM S9S9HHH2r;;;X;;##GS32r;\n                    ;;;;;ssi     rA552Xi;2hMHSB&@95HH#M3r;     HSM2;;;;\n                      XXXX23MMM    &AAXr;i;;;;;sA3hh2s;3    S@@9GM2A;\n                        rA3hH9B&@@2S@@&M;         2#9S5s;333hMHH3r;\n                           ;rAhS&GHMG99@@@@@@@@&SGh32As;XA55Ar;;\n                                     A3h#@GB#SSH3h5s;;\n                                             ;\n\nINDEPENDENT\nBY DESIGN.\nob4cl\nCUBAN LINK / ASCII\nSIGNATURE MARK\n\nFOUR REPOSITORIES.\nONE INDEPENDENT STUDIO.\n\nDEVELOPER TOOLING\nSUPPLY-CHAIN SECURITY\nML SECURITY\nPRIVACY-FIRST APPS\nWEB DESIGN\nSCROLL TO THE WORK\n(5 PROJECTS: FORGIX, CINDR, DEPENDENCY-RISK-RADAR, MODELGUARD, TAUNTON WEB CO.)\n\nBUILT TO BE EXPLORED/01—05\n\nTHE GALLERY\n\nSelected work\nSelected work\n\nA project starter, a private subscription tracker, two security tools, and my web design studio. Open a project to see how it works, or head straight to the source.\n\nINDEX 01—05\n4 REPOSITORIES\n1 STUDIO\n\nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \n01\nForgix\n02\nCindR\n03\ndependency-risk-radar\n04\nmodelguard\n05\nTaunton Web Co.\n\n01\n\n01\n/\nCLI TOOLING\n\nForgix\n\nStart a project once, not forty times.\n\nA scaffolding CLI with template versioning, post-scaffold hooks and governance checks. It copies a template into a new directory, injects variables, runs the package manager and writes a lock file that records where the project came from.\n\nLANGUAGE\nTypeScript\nLICENCE\nMIT\nRUNTIME\nNode.js >= 22\nINSTALL\nnpm install -g @fourlinx/forgix\nCLI\nTEMPLATES\nNON-INTERACTIVE MODE\nREPOSITORY\n↗\nPROJECT DETAILS\n↵\nTypeScript\nNode.js\nnpm registry\nYAML hooks\nGitHub Actions\n$ npx @fourlinx/forgix create my-app -t react-vite --ts --ci\n    Preview — files that would be created/modified:\n\n    src/\n    + src/index.ts 1.2KB\n    + src/App.tsx 0.8KB\n    + package.json 0.5KB\n\n    Summary:\n      + 15 files to create\n      3 directories\n      Total: 12.4KB\nDRY-RUN PREVIEW AS DOCUMENTED IN THE FORGIX README.\n\n02\n\n02\n/\nPRODUCT APP\n\nCindR\n\nYour subscription data never leaves the browser.\n\nA subscription tracker with no accounts and no server. Add subscriptions, read the monthly figure, watch renewals coming — with everything stored in the browser's IndexedDB and exportable as JSON.\n\nLANGUAGE\nTypeScript\nLICENCE\nMIT\nSTORAGE\nIndexedDB — no backend\nSHIP TARGETS\nWeb, Android, iOS, Windows\nPWA\nOFFLINE\nNO ACCOUNTS\nNO TRACKING\nREPOSITORY\n↗\nLIVE APP\n↗\nPROJECT DETAILS\n↵\nReact 19\nTypeScript\nVite\nTailwind CSS v4\nRecharts\nIndexedDB\nCapacitor\nTauri\nNetlify\nYOUR BROWSER\nReact 19 · IndexedDB\nJSON EXPORT\nTHIS DEVICE ONLY\ninstallable PWA\nCLOUD SYNC\nNOT BUILT\n\nNo server, no account, no tracking — CindR ships as a browser-only app that also builds to Android, iOS and Windows.\n\n03\n\n03\n/\nCI / SUPPLY CHAIN\n\ndependency-risk-radar\n\nOne pre-merge question, answered deterministically.\n\nA dependency-change gate for platform teams: does this dependency delta violate our risk policy? It diffs direct dependencies between two refs, scores transitive impact against explicit policy, and returns a decision a pipeline can act on.\n\nLANGUAGE\nTypeScript\nLICENCE\nMIT\nECOSYSTEMS (V1)\nnpm, pnpm\nSURFACES\nCLI, GitHub Action, MCP server\nDETERMINISTIC\nPOLICY-FIRST\nEXIT-CODE CONTRACT\nREPOSITORY\n↗\nPROJECT DETAILS\n↵\nTypeScript\npnpm monorepo\nGitHub Actions\nMCP\nCycloneDX\nOSV / npm registry metadata\npolicy files\nPASS\nsafe to proceed under policy\nWARN\nmerge allowed, reviewer attention\nHIGH-RISK\nexplicit approval / escalation\nFAIL\nblocked by policy or critical\n\nFour documented outcomes, produced by the same refs and policy every time.\n\n04\n\n04\n/\nML SECURITY\n\nmodelguard\n\nGhosts in the weights.\n\nAn ML supply-chain scanner: backdoored weights, poisoned layers and adversarial triggers, found before a model is loaded rather than after. Trivy for neural networks — weight-level inspection and behavioural testing in the same tool.\n\nLANGUAGE\nPython 3.10+\nLICENCE\nMIT\nSTATUS\nAlpha\nINSTALL\npip install modelguard\nWEIGHT SCAN\nACTIVATION SCAN\nBEHAVIOURAL PROBES\nSBOM\nREPOSITORY\n↗\nPROJECT DETAILS\n↵\nPython\nsafetensors\nGGUF\nPyTorch\nCycloneDX 1.5\nHuggingFace Hub\nCRITICAL\nHIGH\nMEDIUM\nLOW\nMG-WEIGHT-002\nCRITICAL\nNaN / Inf values in tensors\nMG-WEIGHT-006\nHIGH\nanomalous embedding vectors\nMG-2024-0005\nCRITICAL\nmalicious pickle payload (RCE)\n\nA map of ModelGuard's documented severities, not a measurement of any model.\n\n05\n\n05\n/\nINDEPENDENT STUDIO\n\nTaunton Web Co.\n\nBuilt locally. Made to stand out.\n\nIndependent web design in Taunton, Somerset, for small businesses — trades, salons, garages, clinics and shops that need to be found and to look the part. Every plan starts with a free homepage mock-up: you only pay once you are happy with it.\n\nBASED\nTaunton, Somerset\nPLANS\nKickstart · Kickstart + Care · Custom\nSTARTING POINT\nFree homepage mock-up\nCARE PLAN\nHosting, backups, security, small edits\nWEB DESIGN\nSMALL BUSINESS\nSOMERSET\nTAUNTONWEBCO.CO.UK\n↗\nPROJECT DETAILS\n↵\nMobile-first design\nLocal SEO foundations\nAccessible markup\nStatic hosting\ntauntonwebco.co.uk\n\nINDEPENDENT WEB DESIGN · TAUNTON, SOMERSET\n\nSmall business. Standout website. Every plan starts with a free homepage mock-up — you pay once you are happy with it.\n\nKickstart\nKickstart + Care\nCustom\ntauntonwebco.co.uk\n↗\n\nVisit the studio for web design, maintenance and current packages.\n\nTHE APPROACH\n\nFour rules that survive contact with production\n01\nDeterministic before clever\n\nA gate that cannot be reproduced is not a gate. The analysis core answers the same way for the same inputs, and the policy that decides the outcome is a file in the repository — reviewable, versioned, diffable.\n\ndependency-risk-radar: same refs + same policy = same decision · Forgix: --dry-run preview and a lock file per scaffold.\n\n02\nLocal-first, explicit trust boundaries\n\nData stays where it was created unless exporting is the point. Where a tool has to touch the machine, the boundary is stated and enforced rather than implied.\n\nCindR: IndexedDB, no accounts, no cloud sync · Forgix: 0600 config, path traversal blocked, sensitive directories refused · modelguard: format handlers that inspect artefacts without executing them.\n\n03\nLimits belong in the README\n\nEvery one of these projects publishes what it does not do — JavaScript-only v1 ecosystems, an alpha signature registry, a tracker that will not cancel your subscriptions. The honest version is more useful than the impressive one.\n\ndependency-risk-radar: pre-1.0, no multi-workspace discovery · modelguard: curated signatures, absence is not proof of safety · CindR: no bank linking, no auto-cancellation.\n\n04\nMotion is optional, accessibility is not\n\nThis page animates with GSAP, Lenis smooth scroll and canvas treatments — and it will hold completely still if you or your operating system ask it to. Every canvas is decorative, every control is keyboard reachable, and every detail panel is a labelled dialog.\n\nUse the Motion control in the header: one click replaces animation with stills and restores native scrolling.\n\nELSEWHERE\n\nThe code lives on GitHub.\nThe websites live in Somerset.\ngithub.com/ob4cl\n↗\ntauntonwebco.co.uk\n↗\n\nIndependent projects, open source and a small web design studio. Explore the repositories to see what I’m building, or visit Taunton Web Co. for website enquiries.\n\nPROJECTS\nForgix\nCindR\ndependency-risk-radar\nmodelguard\nTaunton Web Co.\nBUILT-WITH NOTICES\nReact Bits\nMIT + Commons Clause v1.0 · © 2026 David Haz\nGSAP\nStandard \"no charge\" licence · GreenSock / Webflow\nLenis\nMIT · darkroom.engineering\nogl\nUnlicense · public domain\nMotion\nMIT · Motion B.V.\nTypefaces\nBricolage Grotesque, Fraunces, IBM Plex Mono · SIL OFL 1.1\nPREFERENCES\nMOTION\nOFF\n\nAnimation is opt-out. With motion off, Lenis smooth scrolling and every canvas treatment is skipped and the page scrolls natively.\n\nOB4CL\n\n© 2026 ob4cl · React + TypeScript + Vite · GSAP + Lenis + React Bits (adapted) · self-hosted fonts\n\nNo cookies, no analytics, no third-party requests. Content sourced from each project's own README and repository metadata.",
+    "buttons": [
+      {
+        "text": "Motionoff",
+        "label": null,
+        "pressed": "false"
+      },
+      {
+        "text": "01Forgix",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "02CindR",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "03dependency-risk-radar",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "04modelguard",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "05Taunton Web Co.",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Motionoff",
+        "label": null,
+        "pressed": "false"
+      }
+    ],
+    "links": [
+      {
+        "text": "Skip to the work",
+        "href": "#works"
+      },
+      {
+        "text": "   9@@@@9Gh5S#999@@@&MS&@@@&#M3A#9999@@&G5#@@@@BGh5\n H#GSSGHM352X;2hM9@@@S9GSSHHM32Ash3hG&@9H#9SSGHHh5AAi\n MGhAsi;isXAXiXi;rAhMGH5si;;isXAs;r;;r5GMShAsi;isXAXi\n hAs;     ;rri      h5s;      rrr;      hAs;     ;rri\n Xr;r     M@&#      #9HA      #@&M      995;     HXri;\n sr;X5M9@&XG9@@&#S#BSMsiA3H9&9HG@@&#S#B9M2s;5MG@@G3si\n rrrX2MG@GM2G@@B#SGMh3;sA5hSSS3h@@&9SSHh3X;X2hM@GMAi;\n   isX2h5As;;X3h355Xi;;rsA3h5si;s553552X;;;sXA35As;\n       ;         ;         ;        ;         ;\nob4cl",
+        "href": "#top"
+      },
+      {
+        "text": "Work",
+        "href": "#works"
+      },
+      {
+        "text": "Approach",
+        "href": "#approach"
+      },
+      {
+        "text": "Contact",
+        "href": "#contact"
+      },
+      {
+        "text": "GitHub ↗",
+        "href": "https://github.com/ob4cl"
+      },
+      {
+        "text": "Explore the work ↘",
+        "href": "#works"
+      },
+      {
+        "text": "Scroll to the work (5 projects: Forgix, CindR, dependency-risk-radar, modelguard, Taunton Web Co.)",
+        "href": "#works"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/Forgix"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/CindR"
+      },
+      {
+        "text": "Live app ↗",
+        "href": "https://silver-narwhal-35c66e.netlify.app"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/dependency-risk-radar"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/modelguard"
+      },
+      {
+        "text": "tauntonwebco.co.uk ↗",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "tauntonwebco.co.uk",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "tauntonwebco.co.uk ↗",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "github.com/ob4cl ↗",
+        "href": "https://github.com/ob4cl"
+      },
+      {
+        "text": "tauntonwebco.co.uk ↗",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "Forgix",
+        "href": "https://github.com/ob4cl/Forgix"
+      },
+      {
+        "text": "CindR",
+        "href": "https://github.com/ob4cl/CindR"
+      },
+      {
+        "text": "dependency-risk-radar",
+        "href": "https://github.com/ob4cl/dependency-risk-radar"
+      },
+      {
+        "text": "modelguard",
+        "href": "https://github.com/ob4cl/modelguard"
+      },
+      {
+        "text": "Taunton Web Co.",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "React Bits",
+        "href": "https://github.com/DavidHDev/react-bits"
+      },
+      {
+        "text": "GSAP",
+        "href": "https://gsap.com"
+      },
+      {
+        "text": "Lenis",
+        "href": "https://github.com/darkroomengineering/lenis"
+      },
+      {
+        "text": "ogl",
+        "href": "https://github.com/oframe/ogl"
+      },
+      {
+        "text": "Motion",
+        "href": "https://motion.dev"
+      },
+      {
+        "text": "Typefaces",
+        "href": "https://fontsource.org"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/taunton-webco.webp",
+        "loaded": true,
+        "alt": "The Taunton Web Co. homepage, featuring its web design service and Somerset landscape"
+      }
+    ],
+    "overflows": [],
+    "a11y": []
+  },
+  {
+    "width": 390,
+    "errors": [],
+    "title": "ob4cl — selected work",
+    "headings": [
+      "ob4cl — developer tooling, security infrastructure and local web design",
+      "Selected work",
+      "Selected work",
+      "Forgix",
+      "CindR",
+      "dependency-risk-radar",
+      "modelguard",
+      "Taunton Web Co.",
+      "Four rules that survive contact with production",
+      "Deterministic before clever",
+      "Local-first, explicit trust boundaries",
+      "Limits belong in the README",
+      "Motion is optional, accessibility is not",
+      "The code lives on GitHub.The websites live in Somerset.",
+      "Projects",
+      "Built-with notices",
+      "Preferences"
+    ],
+    "scrollWidth": 390,
+    "bodyText": "SKIP TO THE WORK\n   9@@@@9Gh5S#999@@@&MS&@@@&#M3A#9999@@&G5#@@@@BGh5\n H#GSSGHM352X;2hM9@@@S9GSSHHM32Ash3hG&@9H#9SSGHHh5AAi\n MGhAsi;isXAXiXi;rAhMGH5si;;isXAs;r;;r5GMShAsi;isXAXi\n hAs;     ;rri      h5s;      rrr;      hAs;     ;rri\n Xr;r     M@&#      #9HA      #@&M      995;     HXri;\n sr;X5M9@&XG9@@&#S#BSMsiA3H9&9HG@@&#S#B9M2s;5MG@@G3si\n rrrX2MG@GM2G@@B#SGMh3;sA5hSSS3h@@&9SSHh3X;X2hM@GMAi;\n   isX2h5As;;X3h355Xi;;rsA3h5si;s553552X;;;sXA35As;\n       ;         ;         ;        ;         ;\n\nob4cl\nMOTION\nOFF\n↗\nThis gallery presents 5 selected projects.\n\nINDEPENDENT DEVELOPER / SELECTED WORK\n\nob4cl — developer tooling, security infrastructure and local web design\nob4cl\n\nCuriosity.\nMade functional.\n\nI build developer tools, security experiments and websites. This is a collection of the things I’ve made.\n\nExplore the work\n↘\nFIG. 001 / IDENTITY\n                                     #B@&S@SGHHMM3552X\n                           G9@@@#@&HHGSGShh55A225252AXr;252hHHM2\n                        #@&SS###M35hhAs;s         Sirrr;;rA53M9@@G2\n                      9&#33hAi;    A@@S2;23MHS#B&BM&@9M;    ;AhB@@@@5\n                    hhh5A2;;     #@BG22s;253MGSSS9rG&B@@H3     ;3&#GGHM\n                #B#H52XXHM;H#9@@##ShhX; ;;iisssii;; 5G@BBSSSHMMMHSSGG&&@@9M\n              &@BHM2Ar;BM&@##@@##hA;;                 ;A3HGHHM5555s223SS@@@B3\n            #@HHG2;;  r25332XXr;;                         ;;irrrsr;;;  ;5GBSG3X\n           GH#H2;    GG5As;                                     55ArXr    2MHM5s\n          MHH5r;   S@9G3s;                                       2552HhA   r535X;\n          h55r   SB&HG3r                                           3H9@@9H   5AX;\n        #B2Xs;Hs22553r;                                             s3B&&B&H#3AX;22\n      ##HMirG@9GXAr;                                                   s3SS@@3s;;sXAA\n     9#G2r;;h#@92                                                         9@@X;;;;rA2A\n    #9Mhi;   &@SX                                                         #@@2   ;A55hA\n   G@Bhi    G@9hr                                                         G@#hr    3GBhi\n   #@@2;   G@SS2;                                                         h#GH5i   3&@#X\n   G@@h   #B#G5;                                                           5MM32X   9BSr\n   h#@9#B99#5X;                                                             X252AA23MhX;\n    SGMG9h3X;                                                                 rsXXAX@9G\n  #@B2sXi;;s                                                                   S;;;SH&@95\n #@B3s;;;irXr                                                                 GG5s;;5H@@SX\n 99HX;   XAAs;                                                               hGhA;   2S@@A\n #Ghs    3h3A;                                                               MSh2;    G9SA;\n #Ghs    S@92;                                                               hB@Hs    G9SA\n h35X;   @@Hs;                                                               2H@@M   GGHMr\n 252AsXHGGMXi                                                                 M#@&S3SGM3X;\n  sXXXXs9SMi                                                                   MGHMHSHXs;\n    ;;;SH@@@H                                                                 BBH3sXAi;\n   HM2rr5HS&@G2                                                             #@@5As;;;iri\n   M2X;   2S@BGX                                                           S@ShA;   sssi\n   M52r;   AG#S5;                                                         H&HGA;   Mh2Ai\n   hHhG2    3HH5i                                                         H#M2;    &Bh2;\n    hB@@Hi   M32i                                                         Mh3s   H@SShi\n     h&&@9G5GM2A;                                                         522rrMGGH55i\n      2S&BG9H3si;255                                                   9@9sXXsrGrA2A;\n        r59&SA;;rXA233A                                             S@9#SGh;;9@@2;;\n          S@@3   ;rA3MG3                                           @@SH2r;   @9Hs\n          G&@B3;   r3S@@Mr                                       S@93Ms;   3@@H2i\n           H@9#H2    3B@@H;                                     H@@h2;    9@#MHr\n            5HGGM35A  S#B@@@@@9H5                         HS#SSH355As  H@@SS#A;\n              A33325253HBGG&&GH#GSH3s                 HB@BHH3533AA2s@@B&HGh2;\n                ;rXXAAAA;;;;;rA3GHMh52s S#99BB&##GM S9S9HHH2r;;;X;;##GS32r;\n                    ;;;;;ssi     rA552Xi;2hMHSB&@95HH#M3r;     HSM2;;;;\n                      XXXX23MMM    &AAXr;i;;;;;sA3hh2s;3    S@@9GM2A;\n                        rA3hH9B&@@2S@@&M;         2#9S5s;333hMHH3r;\n                           ;rAhS&GHMG99@@@@@@@@&SGh32As;XA55Ar;;\n                                     A3h#@GB#SSH3h5s;;\n                                             ;\n\nINDEPENDENT\nBY DESIGN.\nob4cl\nCUBAN LINK / ASCII\nSIGNATURE MARK\n\nFOUR REPOSITORIES.\nONE INDEPENDENT STUDIO.\n\nDEVELOPER TOOLING\nSUPPLY-CHAIN SECURITY\nML SECURITY\nPRIVACY-FIRST APPS\nWEB DESIGN\nSCROLL TO THE WORK\n(5 PROJECTS: FORGIX, CINDR, DEPENDENCY-RISK-RADAR, MODELGUARD, TAUNTON WEB CO.)\n\nBUILT TO BE EXPLORED/01—05\n\nTHE GALLERY\n\nSelected work\nSelected work\n\nA project starter, a private subscription tracker, two security tools, and my web design studio. Open a project to see how it works, or head straight to the source.\n\nINDEX 01—05\n4 REPOSITORIES\n1 STUDIO\n\nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \n01\nForgix\n02\nCindR\n03\ndependency-risk-radar\n04\nmodelguard\n05\nTaunton Web Co.\n\n01\n\n01\n/\nCLI TOOLING\n\nForgix\n\nStart a project once, not forty times.\n\nA scaffolding CLI with template versioning, post-scaffold hooks and governance checks. It copies a template into a new directory, injects variables, runs the package manager and writes a lock file that records where the project came from.\n\nLANGUAGE\nTypeScript\nLICENCE\nMIT\nRUNTIME\nNode.js >= 22\nINSTALL\nnpm install -g @fourlinx/forgix\nCLI\nTEMPLATES\nNON-INTERACTIVE MODE\nREPOSITORY\n↗\nPROJECT DETAILS\n↵\nTypeScript\nNode.js\nnpm registry\nYAML hooks\nGitHub Actions\n$ npx @fourlinx/forgix create my-app -t react-vite --ts --ci\n    Preview — files that would be created/modified:\n\n    src/\n    + src/index.ts 1.2KB\n    + src/App.tsx 0.8KB\n    + package.json 0.5KB\n\n    Summary:\n      + 15 files to create\n      3 directories\n      Total: 12.4KB\nDRY-RUN PREVIEW AS DOCUMENTED IN THE FORGIX README.\n\n02\n\n02\n/\nPRODUCT APP\n\nCindR\n\nYour subscription data never leaves the browser.\n\nA subscription tracker with no accounts and no server. Add subscriptions, read the monthly figure, watch renewals coming — with everything stored in the browser's IndexedDB and exportable as JSON.\n\nLANGUAGE\nTypeScript\nLICENCE\nMIT\nSTORAGE\nIndexedDB — no backend\nSHIP TARGETS\nWeb, Android, iOS, Windows\nPWA\nOFFLINE\nNO ACCOUNTS\nNO TRACKING\nREPOSITORY\n↗\nLIVE APP\n↗\nPROJECT DETAILS\n↵\nReact 19\nTypeScript\nVite\nTailwind CSS v4\nRecharts\nIndexedDB\nCapacitor\nTauri\nNetlify\nYOUR BROWSER\nReact 19 · IndexedDB\nJSON EXPORT\nTHIS DEVICE ONLY\ninstallable PWA\nCLOUD SYNC\nNOT BUILT\n\nNo server, no account, no tracking — CindR ships as a browser-only app that also builds to Android, iOS and Windows.\n\n03\n\n03\n/\nCI / SUPPLY CHAIN\n\ndependency-risk-radar\n\nOne pre-merge question, answered deterministically.\n\nA dependency-change gate for platform teams: does this dependency delta violate our risk policy? It diffs direct dependencies between two refs, scores transitive impact against explicit policy, and returns a decision a pipeline can act on.\n\nLANGUAGE\nTypeScript\nLICENCE\nMIT\nECOSYSTEMS (V1)\nnpm, pnpm\nSURFACES\nCLI, GitHub Action, MCP server\nDETERMINISTIC\nPOLICY-FIRST\nEXIT-CODE CONTRACT\nREPOSITORY\n↗\nPROJECT DETAILS\n↵\nTypeScript\npnpm monorepo\nGitHub Actions\nMCP\nCycloneDX\nOSV / npm registry metadata\npolicy files\nPASS\nsafe to proceed under policy\nWARN\nmerge allowed, reviewer attention\nHIGH-RISK\nexplicit approval / escalation\nFAIL\nblocked by policy or critical\n\nFour documented outcomes, produced by the same refs and policy every time.\n\n04\n\n04\n/\nML SECURITY\n\nmodelguard\n\nGhosts in the weights.\n\nAn ML supply-chain scanner: backdoored weights, poisoned layers and adversarial triggers, found before a model is loaded rather than after. Trivy for neural networks — weight-level inspection and behavioural testing in the same tool.\n\nLANGUAGE\nPython 3.10+\nLICENCE\nMIT\nSTATUS\nAlpha\nINSTALL\npip install modelguard\nWEIGHT SCAN\nACTIVATION SCAN\nBEHAVIOURAL PROBES\nSBOM\nREPOSITORY\n↗\nPROJECT DETAILS\n↵\nPython\nsafetensors\nGGUF\nPyTorch\nCycloneDX 1.5\nHuggingFace Hub\nCRITICAL\nHIGH\nMEDIUM\nLOW\nMG-WEIGHT-002\nCRITICAL\nNaN / Inf values in tensors\nMG-WEIGHT-006\nHIGH\nanomalous embedding vectors\nMG-2024-0005\nCRITICAL\nmalicious pickle payload (RCE)\n\nA map of ModelGuard's documented severities, not a measurement of any model.\n\n05\n\n05\n/\nINDEPENDENT STUDIO\n\nTaunton Web Co.\n\nBuilt locally. Made to stand out.\n\nIndependent web design in Taunton, Somerset, for small businesses — trades, salons, garages, clinics and shops that need to be found and to look the part. Every plan starts with a free homepage mock-up: you only pay once you are happy with it.\n\nBASED\nTaunton, Somerset\nPLANS\nKickstart · Kickstart + Care · Custom\nSTARTING POINT\nFree homepage mock-up\nCARE PLAN\nHosting, backups, security, small edits\nWEB DESIGN\nSMALL BUSINESS\nSOMERSET\nTAUNTONWEBCO.CO.UK\n↗\nPROJECT DETAILS\n↵\nMobile-first design\nLocal SEO foundations\nAccessible markup\nStatic hosting\ntauntonwebco.co.uk\n\nINDEPENDENT WEB DESIGN · TAUNTON, SOMERSET\n\nSmall business. Standout website. Every plan starts with a free homepage mock-up — you pay once you are happy with it.\n\nKickstart\nKickstart + Care\nCustom\ntauntonwebco.co.uk\n↗\n\nVisit the studio for web design, maintenance and current packages.\n\nTHE APPROACH\n\nFour rules that survive contact with production\n01\nDeterministic before clever\n\nA gate that cannot be reproduced is not a gate. The analysis core answers the same way for the same inputs, and the policy that decides the outcome is a file in the repository — reviewable, versioned, diffable.\n\ndependency-risk-radar: same refs + same policy = same decision · Forgix: --dry-run preview and a lock file per scaffold.\n\n02\nLocal-first, explicit trust boundaries\n\nData stays where it was created unless exporting is the point. Where a tool has to touch the machine, the boundary is stated and enforced rather than implied.\n\nCindR: IndexedDB, no accounts, no cloud sync · Forgix: 0600 config, path traversal blocked, sensitive directories refused · modelguard: format handlers that inspect artefacts without executing them.\n\n03\nLimits belong in the README\n\nEvery one of these projects publishes what it does not do — JavaScript-only v1 ecosystems, an alpha signature registry, a tracker that will not cancel your subscriptions. The honest version is more useful than the impressive one.\n\ndependency-risk-radar: pre-1.0, no multi-workspace discovery · modelguard: curated signatures, absence is not proof of safety · CindR: no bank linking, no auto-cancellation.\n\n04\nMotion is optional, accessibility is not\n\nThis page animates with GSAP, Lenis smooth scroll and canvas treatments — and it will hold completely still if you or your operating system ask it to. Every canvas is decorative, every control is keyboard reachable, and every detail panel is a labelled dialog.\n\nUse the Motion control in the header: one click replaces animation with stills and restores native scrolling.\n\nELSEWHERE\n\nThe code lives on GitHub.\nThe websites live in Somerset.\ngithub.com/ob4cl\n↗\ntauntonwebco.co.uk\n↗\n\nIndependent projects, open source and a small web design studio. Explore the repositories to see what I’m building, or visit Taunton Web Co. for website enquiries.\n\nPROJECTS\nForgix\nCindR\ndependency-risk-radar\nmodelguard\nTaunton Web Co.\nBUILT-WITH NOTICES\nReact Bits\nMIT + Commons Clause v1.0 · © 2026 David Haz\nGSAP\nStandard \"no charge\" licence · GreenSock / Webflow\nLenis\nMIT · darkroom.engineering\nogl\nUnlicense · public domain\nMotion\nMIT · Motion B.V.\nTypefaces\nBricolage Grotesque, Fraunces, IBM Plex Mono · SIL OFL 1.1\nPREFERENCES\nMOTION\nOFF\n\nAnimation is opt-out. With motion off, Lenis smooth scrolling and every canvas treatment is skipped and the page scrolls natively.\n\nOB4CL\n\n© 2026 ob4cl · React + TypeScript + Vite · GSAP + Lenis + React Bits (adapted) · self-hosted fonts\n\nNo cookies, no analytics, no third-party requests. Content sourced from each project's own README and repository metadata.",
+    "buttons": [
+      {
+        "text": "Motionoff",
+        "label": null,
+        "pressed": "false"
+      },
+      {
+        "text": "01Forgix",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "02CindR",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "03dependency-risk-radar",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "04modelguard",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "05Taunton Web Co.",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Motionoff",
+        "label": null,
+        "pressed": "false"
+      }
+    ],
+    "links": [
+      {
+        "text": "Skip to the work",
+        "href": "#works"
+      },
+      {
+        "text": "   9@@@@9Gh5S#999@@@&MS&@@@&#M3A#9999@@&G5#@@@@BGh5\n H#GSSGHM352X;2hM9@@@S9GSSHHM32Ash3hG&@9H#9SSGHHh5AAi\n MGhAsi;isXAXiXi;rAhMGH5si;;isXAs;r;;r5GMShAsi;isXAXi\n hAs;     ;rri      h5s;      rrr;      hAs;     ;rri\n Xr;r     M@&#      #9HA      #@&M      995;     HXri;\n sr;X5M9@&XG9@@&#S#BSMsiA3H9&9HG@@&#S#B9M2s;5MG@@G3si\n rrrX2MG@GM2G@@B#SGMh3;sA5hSSS3h@@&9SSHh3X;X2hM@GMAi;\n   isX2h5As;;X3h355Xi;;rsA3h5si;s553552X;;;sXA35As;\n       ;         ;         ;        ;         ;\nob4cl",
+        "href": "#top"
+      },
+      {
+        "text": "Work",
+        "href": "#works"
+      },
+      {
+        "text": "Approach",
+        "href": "#approach"
+      },
+      {
+        "text": "Contact",
+        "href": "#contact"
+      },
+      {
+        "text": "GitHub ↗",
+        "href": "https://github.com/ob4cl"
+      },
+      {
+        "text": "Explore the work ↘",
+        "href": "#works"
+      },
+      {
+        "text": "Scroll to the work (5 projects: Forgix, CindR, dependency-risk-radar, modelguard, Taunton Web Co.)",
+        "href": "#works"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/Forgix"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/CindR"
+      },
+      {
+        "text": "Live app ↗",
+        "href": "https://silver-narwhal-35c66e.netlify.app"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/dependency-risk-radar"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/modelguard"
+      },
+      {
+        "text": "tauntonwebco.co.uk ↗",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "tauntonwebco.co.uk",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "tauntonwebco.co.uk ↗",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "github.com/ob4cl ↗",
+        "href": "https://github.com/ob4cl"
+      },
+      {
+        "text": "tauntonwebco.co.uk ↗",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "Forgix",
+        "href": "https://github.com/ob4cl/Forgix"
+      },
+      {
+        "text": "CindR",
+        "href": "https://github.com/ob4cl/CindR"
+      },
+      {
+        "text": "dependency-risk-radar",
+        "href": "https://github.com/ob4cl/dependency-risk-radar"
+      },
+      {
+        "text": "modelguard",
+        "href": "https://github.com/ob4cl/modelguard"
+      },
+      {
+        "text": "Taunton Web Co.",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "React Bits",
+        "href": "https://github.com/DavidHDev/react-bits"
+      },
+      {
+        "text": "GSAP",
+        "href": "https://gsap.com"
+      },
+      {
+        "text": "Lenis",
+        "href": "https://github.com/darkroomengineering/lenis"
+      },
+      {
+        "text": "ogl",
+        "href": "https://github.com/oframe/ogl"
+      },
+      {
+        "text": "Motion",
+        "href": "https://motion.dev"
+      },
+      {
+        "text": "Typefaces",
+        "href": "https://fontsource.org"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/taunton-webco.webp",
+        "loaded": true,
+        "alt": "The Taunton Web Co. homepage, featuring its web design service and Somerset landscape"
+      }
+    ],
+    "overflows": [
+      {
+        "tag": "BUTTON",
+        "text": "04modelguard"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "05Taunton Web Co."
+      }
+    ],
+    "a11y": []
+  },
+  {
+    "width": 320,
+    "errors": [],
+    "title": "ob4cl — selected work",
+    "headings": [
+      "ob4cl — developer tooling, security infrastructure and local web design",
+      "Selected work",
+      "Selected work",
+      "Forgix",
+      "CindR",
+      "dependency-risk-radar",
+      "modelguard",
+      "Taunton Web Co.",
+      "Four rules that survive contact with production",
+      "Deterministic before clever",
+      "Local-first, explicit trust boundaries",
+      "Limits belong in the README",
+      "Motion is optional, accessibility is not",
+      "The code lives on GitHub.The websites live in Somerset.",
+      "Projects",
+      "Built-with notices",
+      "Preferences"
+    ],
+    "scrollWidth": 320,
+    "bodyText": "SKIP TO THE WORK\n   9@@@@9Gh5S#999@@@&MS&@@@&#M3A#9999@@&G5#@@@@BGh5\n H#GSSGHM352X;2hM9@@@S9GSSHHM32Ash3hG&@9H#9SSGHHh5AAi\n MGhAsi;isXAXiXi;rAhMGH5si;;isXAs;r;;r5GMShAsi;isXAXi\n hAs;     ;rri      h5s;      rrr;      hAs;     ;rri\n Xr;r     M@&#      #9HA      #@&M      995;     HXri;\n sr;X5M9@&XG9@@&#S#BSMsiA3H9&9HG@@&#S#B9M2s;5MG@@G3si\n rrrX2MG@GM2G@@B#SGMh3;sA5hSSS3h@@&9SSHh3X;X2hM@GMAi;\n   isX2h5As;;X3h355Xi;;rsA3h5si;s553552X;;;sXA35As;\n       ;         ;         ;        ;         ;\n\nob4cl\nMOTION\nOFF\n↗\nThis gallery presents 5 selected projects.\n\nINDEPENDENT DEVELOPER / SELECTED WORK\n\nob4cl — developer tooling, security infrastructure and local web design\nob4cl\n\nCuriosity.\nMade functional.\n\nI build developer tools, security experiments and websites. This is a collection of the things I’ve made.\n\nExplore the work\n↘\nFIG. 001 / IDENTITY\n                                     #B@&S@SGHHMM3552X\n                           G9@@@#@&HHGSGShh55A225252AXr;252hHHM2\n                        #@&SS###M35hhAs;s         Sirrr;;rA53M9@@G2\n                      9&#33hAi;    A@@S2;23MHS#B&BM&@9M;    ;AhB@@@@5\n                    hhh5A2;;     #@BG22s;253MGSSS9rG&B@@H3     ;3&#GGHM\n                #B#H52XXHM;H#9@@##ShhX; ;;iisssii;; 5G@BBSSSHMMMHSSGG&&@@9M\n              &@BHM2Ar;BM&@##@@##hA;;                 ;A3HGHHM5555s223SS@@@B3\n            #@HHG2;;  r25332XXr;;                         ;;irrrsr;;;  ;5GBSG3X\n           GH#H2;    GG5As;                                     55ArXr    2MHM5s\n          MHH5r;   S@9G3s;                                       2552HhA   r535X;\n          h55r   SB&HG3r                                           3H9@@9H   5AX;\n        #B2Xs;Hs22553r;                                             s3B&&B&H#3AX;22\n      ##HMirG@9GXAr;                                                   s3SS@@3s;;sXAA\n     9#G2r;;h#@92                                                         9@@X;;;;rA2A\n    #9Mhi;   &@SX                                                         #@@2   ;A55hA\n   G@Bhi    G@9hr                                                         G@#hr    3GBhi\n   #@@2;   G@SS2;                                                         h#GH5i   3&@#X\n   G@@h   #B#G5;                                                           5MM32X   9BSr\n   h#@9#B99#5X;                                                             X252AA23MhX;\n    SGMG9h3X;                                                                 rsXXAX@9G\n  #@B2sXi;;s                                                                   S;;;SH&@95\n #@B3s;;;irXr                                                                 GG5s;;5H@@SX\n 99HX;   XAAs;                                                               hGhA;   2S@@A\n #Ghs    3h3A;                                                               MSh2;    G9SA;\n #Ghs    S@92;                                                               hB@Hs    G9SA\n h35X;   @@Hs;                                                               2H@@M   GGHMr\n 252AsXHGGMXi                                                                 M#@&S3SGM3X;\n  sXXXXs9SMi                                                                   MGHMHSHXs;\n    ;;;SH@@@H                                                                 BBH3sXAi;\n   HM2rr5HS&@G2                                                             #@@5As;;;iri\n   M2X;   2S@BGX                                                           S@ShA;   sssi\n   M52r;   AG#S5;                                                         H&HGA;   Mh2Ai\n   hHhG2    3HH5i                                                         H#M2;    &Bh2;\n    hB@@Hi   M32i                                                         Mh3s   H@SShi\n     h&&@9G5GM2A;                                                         522rrMGGH55i\n      2S&BG9H3si;255                                                   9@9sXXsrGrA2A;\n        r59&SA;;rXA233A                                             S@9#SGh;;9@@2;;\n          S@@3   ;rA3MG3                                           @@SH2r;   @9Hs\n          G&@B3;   r3S@@Mr                                       S@93Ms;   3@@H2i\n           H@9#H2    3B@@H;                                     H@@h2;    9@#MHr\n            5HGGM35A  S#B@@@@@9H5                         HS#SSH355As  H@@SS#A;\n              A33325253HBGG&&GH#GSH3s                 HB@BHH3533AA2s@@B&HGh2;\n                ;rXXAAAA;;;;;rA3GHMh52s S#99BB&##GM S9S9HHH2r;;;X;;##GS32r;\n                    ;;;;;ssi     rA552Xi;2hMHSB&@95HH#M3r;     HSM2;;;;\n                      XXXX23MMM    &AAXr;i;;;;;sA3hh2s;3    S@@9GM2A;\n                        rA3hH9B&@@2S@@&M;         2#9S5s;333hMHH3r;\n                           ;rAhS&GHMG99@@@@@@@@&SGh32As;XA55Ar;;\n                                     A3h#@GB#SSH3h5s;;\n                                             ;\n\nINDEPENDENT\nBY DESIGN.\nob4cl\nCUBAN LINK / ASCII\nSIGNATURE MARK\n\nFOUR REPOSITORIES.\nONE INDEPENDENT STUDIO.\n\nDEVELOPER TOOLING\nSUPPLY-CHAIN SECURITY\nML SECURITY\nPRIVACY-FIRST APPS\nWEB DESIGN\nSCROLL TO THE WORK\n(5 PROJECTS: FORGIX, CINDR, DEPENDENCY-RISK-RADAR, MODELGUARD, TAUNTON WEB CO.)\n\nBUILT TO BE EXPLORED/01—05\n\nTHE GALLERY\n\nSelected work\nSelected work\n\nA project starter, a private subscription tracker, two security tools, and my web design studio. Open a project to see how it works, or head straight to the source.\n\nINDEX 01—05\n4 REPOSITORIES\n1 STUDIO\n\nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nTYPESCRIPT · REACT 19 · PYTHON · INDEXEDDB · PNPM MONOREPO · GITHUB ACTIONS · SAFETENSORS \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \nCYCLONEDX · MCP · TAURI · CAPACITOR · TAILWIND CSS V4 · NODE.JS · POLICY FILES \n01\nForgix\n02\nCindR\n03\ndependency-risk-radar\n04\nmodelguard\n05\nTaunton Web Co.\n\n01\n\n01\n/\nCLI TOOLING\n\nForgix\n\nStart a project once, not forty times.\n\nA scaffolding CLI with template versioning, post-scaffold hooks and governance checks. It copies a template into a new directory, injects variables, runs the package manager and writes a lock file that records where the project came from.\n\nLANGUAGE\nTypeScript\nLICENCE\nMIT\nRUNTIME\nNode.js >= 22\nINSTALL\nnpm install -g @fourlinx/forgix\nCLI\nTEMPLATES\nNON-INTERACTIVE MODE\nREPOSITORY\n↗\nPROJECT DETAILS\n↵\nTypeScript\nNode.js\nnpm registry\nYAML hooks\nGitHub Actions\n$ npx @fourlinx/forgix create my-app -t react-vite --ts --ci\n    Preview — files that would be created/modified:\n\n    src/\n    + src/index.ts 1.2KB\n    + src/App.tsx 0.8KB\n    + package.json 0.5KB\n\n    Summary:\n      + 15 files to create\n      3 directories\n      Total: 12.4KB\nDRY-RUN PREVIEW AS DOCUMENTED IN THE FORGIX README.\n\n02\n\n02\n/\nPRODUCT APP\n\nCindR\n\nYour subscription data never leaves the browser.\n\nA subscription tracker with no accounts and no server. Add subscriptions, read the monthly figure, watch renewals coming — with everything stored in the browser's IndexedDB and exportable as JSON.\n\nLANGUAGE\nTypeScript\nLICENCE\nMIT\nSTORAGE\nIndexedDB — no backend\nSHIP TARGETS\nWeb, Android, iOS, Windows\nPWA\nOFFLINE\nNO ACCOUNTS\nNO TRACKING\nREPOSITORY\n↗\nLIVE APP\n↗\nPROJECT DETAILS\n↵\nReact 19\nTypeScript\nVite\nTailwind CSS v4\nRecharts\nIndexedDB\nCapacitor\nTauri\nNetlify\nYOUR BROWSER\nReact 19 · IndexedDB\nJSON EXPORT\nTHIS DEVICE ONLY\ninstallable PWA\nCLOUD SYNC\nNOT BUILT\n\nNo server, no account, no tracking — CindR ships as a browser-only app that also builds to Android, iOS and Windows.\n\n03\n\n03\n/\nCI / SUPPLY CHAIN\n\ndependency-risk-radar\n\nOne pre-merge question, answered deterministically.\n\nA dependency-change gate for platform teams: does this dependency delta violate our risk policy? It diffs direct dependencies between two refs, scores transitive impact against explicit policy, and returns a decision a pipeline can act on.\n\nLANGUAGE\nTypeScript\nLICENCE\nMIT\nECOSYSTEMS (V1)\nnpm, pnpm\nSURFACES\nCLI, GitHub Action, MCP server\nDETERMINISTIC\nPOLICY-FIRST\nEXIT-CODE CONTRACT\nREPOSITORY\n↗\nPROJECT DETAILS\n↵\nTypeScript\npnpm monorepo\nGitHub Actions\nMCP\nCycloneDX\nOSV / npm registry metadata\npolicy files\nPASS\nsafe to proceed under policy\nWARN\nmerge allowed, reviewer attention\nHIGH-RISK\nexplicit approval / escalation\nFAIL\nblocked by policy or critical\n\nFour documented outcomes, produced by the same refs and policy every time.\n\n04\n\n04\n/\nML SECURITY\n\nmodelguard\n\nGhosts in the weights.\n\nAn ML supply-chain scanner: backdoored weights, poisoned layers and adversarial triggers, found before a model is loaded rather than after. Trivy for neural networks — weight-level inspection and behavioural testing in the same tool.\n\nLANGUAGE\nPython 3.10+\nLICENCE\nMIT\nSTATUS\nAlpha\nINSTALL\npip install modelguard\nWEIGHT SCAN\nACTIVATION SCAN\nBEHAVIOURAL PROBES\nSBOM\nREPOSITORY\n↗\nPROJECT DETAILS\n↵\nPython\nsafetensors\nGGUF\nPyTorch\nCycloneDX 1.5\nHuggingFace Hub\nCRITICAL\nHIGH\nMEDIUM\nLOW\nMG-WEIGHT-002\nCRITICAL\nNaN / Inf values in tensors\nMG-WEIGHT-006\nHIGH\nanomalous embedding vectors\nMG-2024-0005\nCRITICAL\nmalicious pickle payload (RCE)\n\nA map of ModelGuard's documented severities, not a measurement of any model.\n\n05\n\n05\n/\nINDEPENDENT STUDIO\n\nTaunton Web Co.\n\nBuilt locally. Made to stand out.\n\nIndependent web design in Taunton, Somerset, for small businesses — trades, salons, garages, clinics and shops that need to be found and to look the part. Every plan starts with a free homepage mock-up: you only pay once you are happy with it.\n\nBASED\nTaunton, Somerset\nPLANS\nKickstart · Kickstart + Care · Custom\nSTARTING POINT\nFree homepage mock-up\nCARE PLAN\nHosting, backups, security, small edits\nWEB DESIGN\nSMALL BUSINESS\nSOMERSET\nTAUNTONWEBCO.CO.UK\n↗\nPROJECT DETAILS\n↵\nMobile-first design\nLocal SEO foundations\nAccessible markup\nStatic hosting\ntauntonwebco.co.uk\n\nINDEPENDENT WEB DESIGN · TAUNTON, SOMERSET\n\nSmall business. Standout website. Every plan starts with a free homepage mock-up — you pay once you are happy with it.\n\nKickstart\nKickstart + Care\nCustom\ntauntonwebco.co.uk\n↗\n\nVisit the studio for web design, maintenance and current packages.\n\nTHE APPROACH\n\nFour rules that survive contact with production\n01\nDeterministic before clever\n\nA gate that cannot be reproduced is not a gate. The analysis core answers the same way for the same inputs, and the policy that decides the outcome is a file in the repository — reviewable, versioned, diffable.\n\ndependency-risk-radar: same refs + same policy = same decision · Forgix: --dry-run preview and a lock file per scaffold.\n\n02\nLocal-first, explicit trust boundaries\n\nData stays where it was created unless exporting is the point. Where a tool has to touch the machine, the boundary is stated and enforced rather than implied.\n\nCindR: IndexedDB, no accounts, no cloud sync · Forgix: 0600 config, path traversal blocked, sensitive directories refused · modelguard: format handlers that inspect artefacts without executing them.\n\n03\nLimits belong in the README\n\nEvery one of these projects publishes what it does not do — JavaScript-only v1 ecosystems, an alpha signature registry, a tracker that will not cancel your subscriptions. The honest version is more useful than the impressive one.\n\ndependency-risk-radar: pre-1.0, no multi-workspace discovery · modelguard: curated signatures, absence is not proof of safety · CindR: no bank linking, no auto-cancellation.\n\n04\nMotion is optional, accessibility is not\n\nThis page animates with GSAP, Lenis smooth scroll and canvas treatments — and it will hold completely still if you or your operating system ask it to. Every canvas is decorative, every control is keyboard reachable, and every detail panel is a labelled dialog.\n\nUse the Motion control in the header: one click replaces animation with stills and restores native scrolling.\n\nELSEWHERE\n\nThe code lives on GitHub.\nThe websites live in Somerset.\ngithub.com/ob4cl\n↗\ntauntonwebco.co.uk\n↗\n\nIndependent projects, open source and a small web design studio. Explore the repositories to see what I’m building, or visit Taunton Web Co. for website enquiries.\n\nPROJECTS\nForgix\nCindR\ndependency-risk-radar\nmodelguard\nTaunton Web Co.\nBUILT-WITH NOTICES\nReact Bits\nMIT + Commons Clause v1.0 · © 2026 David Haz\nGSAP\nStandard \"no charge\" licence · GreenSock / Webflow\nLenis\nMIT · darkroom.engineering\nogl\nUnlicense · public domain\nMotion\nMIT · Motion B.V.\nTypefaces\nBricolage Grotesque, Fraunces, IBM Plex Mono · SIL OFL 1.1\nPREFERENCES\nMOTION\nOFF\n\nAnimation is opt-out. With motion off, Lenis smooth scrolling and every canvas treatment is skipped and the page scrolls natively.\n\nOB4CL\n\n© 2026 ob4cl · React + TypeScript + Vite · GSAP + Lenis + React Bits (adapted) · self-hosted fonts\n\nNo cookies, no analytics, no third-party requests. Content sourced from each project's own README and repository metadata.",
+    "buttons": [
+      {
+        "text": "Motionoff",
+        "label": null,
+        "pressed": "false"
+      },
+      {
+        "text": "01Forgix",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "02CindR",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "03dependency-risk-radar",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "04modelguard",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "05Taunton Web Co.",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Project details↵",
+        "label": null,
+        "pressed": null
+      },
+      {
+        "text": "Motionoff",
+        "label": null,
+        "pressed": "false"
+      }
+    ],
+    "links": [
+      {
+        "text": "Skip to the work",
+        "href": "#works"
+      },
+      {
+        "text": "   9@@@@9Gh5S#999@@@&MS&@@@&#M3A#9999@@&G5#@@@@BGh5\n H#GSSGHM352X;2hM9@@@S9GSSHHM32Ash3hG&@9H#9SSGHHh5AAi\n MGhAsi;isXAXiXi;rAhMGH5si;;isXAs;r;;r5GMShAsi;isXAXi\n hAs;     ;rri      h5s;      rrr;      hAs;     ;rri\n Xr;r     M@&#      #9HA      #@&M      995;     HXri;\n sr;X5M9@&XG9@@&#S#BSMsiA3H9&9HG@@&#S#B9M2s;5MG@@G3si\n rrrX2MG@GM2G@@B#SGMh3;sA5hSSS3h@@&9SSHh3X;X2hM@GMAi;\n   isX2h5As;;X3h355Xi;;rsA3h5si;s553552X;;;sXA35As;\n       ;         ;         ;        ;         ;\nob4cl",
+        "href": "#top"
+      },
+      {
+        "text": "Work",
+        "href": "#works"
+      },
+      {
+        "text": "Approach",
+        "href": "#approach"
+      },
+      {
+        "text": "Contact",
+        "href": "#contact"
+      },
+      {
+        "text": "GitHub ↗",
+        "href": "https://github.com/ob4cl"
+      },
+      {
+        "text": "Explore the work ↘",
+        "href": "#works"
+      },
+      {
+        "text": "Scroll to the work (5 projects: Forgix, CindR, dependency-risk-radar, modelguard, Taunton Web Co.)",
+        "href": "#works"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/Forgix"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/CindR"
+      },
+      {
+        "text": "Live app ↗",
+        "href": "https://silver-narwhal-35c66e.netlify.app"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/dependency-risk-radar"
+      },
+      {
+        "text": "Repository ↗",
+        "href": "https://github.com/ob4cl/modelguard"
+      },
+      {
+        "text": "tauntonwebco.co.uk ↗",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "tauntonwebco.co.uk",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "tauntonwebco.co.uk ↗",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "github.com/ob4cl ↗",
+        "href": "https://github.com/ob4cl"
+      },
+      {
+        "text": "tauntonwebco.co.uk ↗",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "Forgix",
+        "href": "https://github.com/ob4cl/Forgix"
+      },
+      {
+        "text": "CindR",
+        "href": "https://github.com/ob4cl/CindR"
+      },
+      {
+        "text": "dependency-risk-radar",
+        "href": "https://github.com/ob4cl/dependency-risk-radar"
+      },
+      {
+        "text": "modelguard",
+        "href": "https://github.com/ob4cl/modelguard"
+      },
+      {
+        "text": "Taunton Web Co.",
+        "href": "https://tauntonwebco.co.uk"
+      },
+      {
+        "text": "React Bits",
+        "href": "https://github.com/DavidHDev/react-bits"
+      },
+      {
+        "text": "GSAP",
+        "href": "https://gsap.com"
+      },
+      {
+        "text": "Lenis",
+        "href": "https://github.com/darkroomengineering/lenis"
+      },
+      {
+        "text": "ogl",
+        "href": "https://github.com/oframe/ogl"
+      },
+      {
+        "text": "Motion",
+        "href": "https://motion.dev"
+      },
+      {
+        "text": "Typefaces",
+        "href": "https://fontsource.org"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/taunton-webco.webp",
+        "loaded": true,
+        "alt": "The Taunton Web Co. homepage, featuring its web design service and Somerset landscape"
+      }
+    ],
+    "overflows": [
+      {
+        "tag": "BUTTON",
+        "text": "03dependency-risk-radar"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "04modelguard"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "05Taunton Web Co."
+      }
+    ],
+    "a11y": []
+  }
+]

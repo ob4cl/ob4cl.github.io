@@ -1,0 +1,24 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+/* Lenis (MIT, darkroom.engineering) — the small set of rules the library documents,
+   inlined so the build has no dependency on the package's CSS export map. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+.lenis [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

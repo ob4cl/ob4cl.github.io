@@ -1,0 +1,6 @@
+/* React Bits — Particles (adapted). See /THIRD-PARTY-NOTICES.md */
+.particles-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

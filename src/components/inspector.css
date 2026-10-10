@@ -1,0 +1,239 @@
+.inspector {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.inspector__scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 7, 5, 0.72);
+  backdrop-filter: blur(3px);
+  animation: scrim-in var(--dur) var(--ease-out) both;
+}
+
+@keyframes scrim-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.inspector__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(46rem, 100%);
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--ink-2);
+  border-left: 1px solid var(--rule-strong);
+  padding: clamp(1.5rem, 3vw, 2.75rem);
+  display: grid;
+  align-content: start;
+  gap: 1.35rem;
+  animation: dialog-in var(--dur-slow) var(--ease-out) both;
+}
+
+@keyframes dialog-in {
+  from {
+    transform: translateX(2.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+html[data-motion='off'] .inspector__scrim,
+html[data-motion='off'] .inspector__dialog {
+  animation: none;
+}
+
+.inspector__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.inspector__kicker {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.inspector__num {
+  color: var(--acid);
+}
+
+.inspector__name {
+  margin-top: 0.35rem;
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+
+.inspector__close {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--r-full);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--paper);
+  flex: none;
+}
+
+.inspector__close:hover {
+  border-color: var(--acid);
+  color: var(--acid);
+}
+
+.inspector__close-key {
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.05rem 0.3rem;
+  font-size: 0.6rem;
+  color: var(--muted);
+}
+
+.inspector__lede {
+  font-family: var(--font-serif);
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--paper-dim);
+}
+
+.inspector__body {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.inspector__section-title {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--acid);
+  margin-bottom: 0.6rem;
+}
+
+.inspector__code {
+  margin: 0 0 0.75rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  background: rgba(10, 11, 9, 0.72);
+  overflow-x: auto;
+  font-size: 0.76rem;
+  line-height: 1.7;
+  color: var(--paper-dim);
+}
+
+.inspector__list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.inspector__list li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--paper-dim);
+  font-size: var(--step-0);
+  line-height: 1.6;
+}
+
+.inspector__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 1px;
+  background: var(--acid-deep);
+}
+
+.inspector__foot {
+  display: grid;
+  gap: 1.25rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--rule);
+}
+
+.inspector__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 1.25rem;
+  margin: 0;
+}
+
+.inspector__facts dt {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.inspector__facts dd {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--paper);
+  overflow-wrap: anywhere;
+}
+
+.inspector__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.inspector__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--acid);
+  border-radius: var(--r-full);
+  color: var(--acid);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.inspector__links a:hover {
+  background: var(--acid);
+  color: var(--ink-on-acid);
+}
+
+@media (max-width: 640px) {
+  .inspector__dialog {
+    width: 100%;
+    border-left: 0;
+    border-top: 1px solid var(--rule-strong);
+  }
+
+  .inspector__facts {
+    grid-template-columns: 1fr;
+  }
+}

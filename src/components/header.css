@@ -1,0 +1,113 @@
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem var(--gutter);
+  border-bottom: 1px solid transparent;
+  background: color-mix(in srgb, var(--ink) 72%, transparent);
+  backdrop-filter: blur(9px) saturate(120%);
+  transition:
+    padding var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    background-color var(--dur) var(--ease);
+}
+
+.site-header.is-condensed {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom-color: var(--rule);
+  background: color-mix(in srgb, var(--ink) 88%, transparent);
+}
+
+.site-header__brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.site-header__brand-mark {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.site-header__brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.site-header__nav ul {
+  display: flex;
+  gap: clamp(0.75rem, 2vw, 1.75rem);
+}
+
+.site-header__nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+  text-decoration: none;
+  transition: color var(--dur) var(--ease);
+}
+
+.site-header__nav a:hover {
+  color: var(--acid);
+}
+
+.site-header__tools {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.site-header__gh {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--paper);
+}
+
+.site-header__gh:hover {
+  color: var(--acid);
+}
+
+@media (max-width: 860px) {
+  .site-header__nav {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-header { gap: .4rem; padding-inline: 12px; }
+  .site-header__brand { gap: .45rem; }
+  .site-header__tools { gap: .2rem; }
+  .site-header .motion-toggle { font-size: .59rem; padding-right: .5rem; gap: .35rem; }
+  .site-header .ascii-chain-mark { width: 42px; }
+  .site-header .ascii-chain-mark pre { font-size: 1.32px; }
+}
+@media (max-width: 520px) {
+  .site-header__gh-label {
+    display: none;
+  }
+}
