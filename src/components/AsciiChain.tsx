@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import necklace from '../assets/chain-hero.txt?raw';
 import mark from '../assets/chain-mark.txt?raw';
 import {
+  CHAIN_FIELD,
   easeToward,
   glyphDisplacement,
   isDisplaced,
@@ -17,8 +18,6 @@ import './ascii-chain.css';
 
 /** Original procedural ASCII artwork created for ob4cl, not a third-party logo. */
 
-/** The break-apart field: how far the cursor reaches and how hard a glyph is thrown. */
-const FIELD = { reach: 150, push: 26, scatter: 13, spin: 34 };
 /** How fast a glyph travels, per frame: quicker into the fracture than back out of it. */
 const EASE_OUT = 0.24;
 const EASE_HOME = 0.12;
@@ -117,7 +116,7 @@ export default function AsciiChain({
         let moving = false;
 
         for (let index = 0; index < spans.length; index++) {
-          const target = glyphDisplacement(homes[index], cursor, FIELD);
+          const target = glyphDisplacement(homes[index], cursor, CHAIN_FIELD);
           const offset = easeToward(
             offsets[index],
             target,

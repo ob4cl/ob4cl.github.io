@@ -1,6 +1,7 @@
 import { cleanup, render } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { CHAIN_FIELD } from '../lib/chainField';
 import AsciiChain from './AsciiChain';
 
 // jsdom renders the ~1,300 glyph boxes slowly; give these tests room to breathe.
@@ -136,7 +137,7 @@ describe('AsciiChain break-apart field', () => {
     glyphs.forEach((glyph, index) => {
       const home = homeOf(index);
       const distance = Math.hypot(home.x - cursor.x, home.y - cursor.y);
-      if (distance > 165) {
+      if (distance > CHAIN_FIELD.reach + 15) {
         expect(glyphTransform(glyph)).toBeFalsy();
       }
     });
@@ -144,8 +145,10 @@ describe('AsciiChain break-apart field', () => {
     // Displacement is a falloff, bounded by push + scatter.
     for (const glyph of moved) {
       const value = offset(glyph);
-      expect(Math.hypot(value.x, value.y)).toBeLessThanOrEqual(26 + 13 + 0.01);
-      expect(Math.abs(value.rotation)).toBeLessThanOrEqual(34 + 0.01);
+      expect(Math.hypot(value.x, value.y)).toBeLessThanOrEqual(
+        CHAIN_FIELD.push + CHAIN_FIELD.scatter + 0.01
+      );
+      expect(Math.abs(value.rotation)).toBeLessThanOrEqual(CHAIN_FIELD.spin + 0.01);
     }
 
     // A glyph just right of the cursor is thrown further right — away from it, not toward it.

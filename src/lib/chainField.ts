@@ -49,6 +49,12 @@ export interface Displacement {
 export const NO_DISPLACEMENT: Displacement = { x: 0, y: 0, rotation: 0 };
 
 /**
+ * The field the hero chain uses: far enough to feel like a wave through the chain, small enough
+ * that the glyphs never fly off the artwork.
+ */
+export const CHAIN_FIELD: FieldConfig = { reach: 165, push: 32, scatter: 16, spin: 48 };
+
+/**
  * Where the pointer sits in the artwork's own coordinate space. The artwork is rotated in CSS, so
  * the rotation is undone before any distance is measured — otherwise the field would lean with it.
  */

@@ -88,7 +88,7 @@ function PrivacyTreatment({ animated }: TreatmentProps) {
           variant="default"
           gap={7}
           speed={animated ? 26 : 0}
-          colors="#d8ff3e,#a9cc2b,#3f4a1c"
+          colors="#d8ff3e,#a9cc2b,#c9f06a"
           noFocus
           pointerRadius={170}
           className="treatment__pixel"
